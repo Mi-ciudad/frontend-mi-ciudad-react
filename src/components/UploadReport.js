@@ -36,7 +36,7 @@ class UploadReport extends Component {
                     <div class="content-user">
                         <div class="profile-img">
                             <figure>
-                                <img src="../../assets/images/fot-profil.png" />
+                            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQHc1-1_MhLsnQ/profile-displayphoto-shrink_200_200/0?e=1599091200&v=beta&t=ey3Kxn_4iVo0nNZi21Y6OUuB07ku6vnfoTaAeKoiWjE" />
                             </figure>
                             <p>Tironi_Tiziana</p>
                         </div>
@@ -49,12 +49,12 @@ class UploadReport extends Component {
                             placeholder="Escribe la descripcion aqui"
                             onChange={(event) => this.valueToState(event.target)}
                         ></textarea>
-                        <textarea
+                        {/* <textarea
                             name="ubicacion"
                             type="text"
                             placeholder="Escribe la ubicacion aqui"
                             onChange={(event) => this.valueToState(event.target)}
-                        ></textarea>
+                        ></textarea> */}
                     </div>
 
                     <div class="items-lower">
