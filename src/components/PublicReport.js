@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 class PublicReport extends React.Component {
-    
+
     render() {
         return (
             <div className="content-public-report">
@@ -22,7 +23,7 @@ class PublicReport extends React.Component {
                     </div>
 
                     <div class="description desciption-post">
-                        <p>Lorem ipsum</p>
+                        <p>{this.props.descripcion}</p>
                     </div>
 
                     <div class="post-photo">
@@ -31,24 +32,24 @@ class PublicReport extends React.Component {
                         </figure>
                         <div class="localation">
                             <i class="fas fa-map-marker-alt"></i>
-                            <label>Montevideo - Barrio Sur 22-04-2020</label>
+                            <label>{this.props.ubicacion}</label>
                         </div>
-                    </div>
 
-                    <div class="items-lower">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-thumbs-up like"></i>
-                                </a>
-                            </li>
+                        <div class="items-lower">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-thumbs-up like"></i>
+                                    </a>
+                                </li>
 
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-comment comments"></i>
-                                </a>
-                            </li>
-                        </ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-comment comments"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

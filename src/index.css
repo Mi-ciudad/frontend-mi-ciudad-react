@@ -447,10 +447,10 @@ body::selection {
 
 .report-section{ 
   width: 100%;
-  height: 100vh;
-  overflow-y: auto;
-  align-items: center;
-  padding-top: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 } 
 
 .content-public-report{
@@ -494,9 +494,11 @@ body::selection {
   border-radius: 20px; 
   box-shadow: 3px 3px 12px -6px black; 
   padding: 20px; 
+  margin-bottom: 40px; 
   height: auto; 
   display: flex;
   flex-direction: column;
+
 }
 
 /* content user */
