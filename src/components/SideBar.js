@@ -19,38 +19,38 @@ class SideBar extends React.Component {
                     </figure>
                     <ul>
                         <li>
-                            <a href="index.html">
+                            <a href="/main">
                                 <i class="fas fa-home"></i> Menu
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="./pages/perfil">
                                 <i class="far fa-user-circle"></i> Perfil
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="./pages/reportes">
                                 <i class="fas fa-list-ul"></i> Reportes
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="./pages/historial">
                                 <i class="fas fa-history"></i> Historial
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="./pages/seguirCaso">
                                 <i class="far fa-building"></i> Seguimiento de casos
                             </a>
                         </li>
 
                         <li>
-                            <a href="#">
+                            <a href="./perfil/sobreNos">
                                 <i class="far fa-address-card"></i>Sobre nosotros
                             </a>
                         </li>
                         <li>
-                            <a href="./pages/help.html">
+                            <a href="./pages/ayuda">
                                 <i class="far fa-question-circle"></i> Ayuda
                             </a>
                         </li>

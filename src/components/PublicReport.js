@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
 class PublicReport extends React.Component {
-    
+
     render() {
         return (
             <div class="public-report">
@@ -21,7 +22,7 @@ class PublicReport extends React.Component {
                 </div>
 
                 <div class="description desciption-post">
-                    <p>Lorem ipsum</p>
+                    <p>{this.props.descripcion}</p>
                 </div>
 
                 <div class="post-photo">
@@ -30,7 +31,7 @@ class PublicReport extends React.Component {
                     </figure>
                     <div class="localation">
                         <i class="fas fa-map-marker-alt"></i>
-                        <label>Montevideo - Barrio Sur 22-04-2020</label>
+                        <label>{this.props.ubicacion}</label>
                     </div>
                 </div>
 
