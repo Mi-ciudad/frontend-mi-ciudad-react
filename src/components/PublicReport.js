@@ -3,6 +3,10 @@ import PropTypes from 'prop-types'
 
 class PublicReport extends React.Component {
 
+
+
+
+    
     render() {
         return (
             <div class="public-report">
