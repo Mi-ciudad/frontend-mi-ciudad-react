@@ -25,8 +25,6 @@ class UploadReport extends Component {
                 [target.name]: target.value,
             }))
         );
-      
-        console.log(target.name + " = " + target.value)
     };
            
     render() {
@@ -81,7 +79,7 @@ class UploadReport extends Component {
                                 <a
                                     href="#"
                                     class="btn-public"
-                                        onClick={() => { this.props.newReport (this.state.descripcion,this.state.ubicacion) }}
+                                        onClick={() => { this.props.newReport (this.state.descripcion,this.state.ubicacion)}}
                                 > 
                                     {" "}
                   Publicar{" "}
