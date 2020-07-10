@@ -1,12 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types'
 
 class PublicReport extends React.Component {
 
-
-
-
-    
     render() {
         return (
             <div className="content-public-report">

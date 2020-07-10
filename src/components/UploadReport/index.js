@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import { Component } from "react";
-import PublicReport from "./PublicReport";
-import { render } from "@testing-library/react";
-import Main from '../pages/Main'
 
 class UploadReport extends Component {
 
@@ -14,9 +11,6 @@ class UploadReport extends Component {
     componentDidMount() {
         console.log(this.props)
     }
-
-    
-    
 
     //funcion que setea el state del componente con lo
     valueToState = (target) => {

@@ -1,8 +1,5 @@
 import React from "react";
 import SideBar from "../src/components/SideBar";
-import UploadReport from "../src/components/UploadReport";
-import BtnBuscar from "../src/components/BtnBuscar";
-import PublicReport from "../src/components/PublicReport";
 import Main from "../src/pages/Main";
 
 import { Component } from "react";
@@ -10,6 +7,8 @@ import { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import "./App.css";
+import HelpData from "./components/HelpData";
+import PerfilContainer from "./pages/Perfil";
 
 class App extends Component {
   render() {
@@ -23,12 +22,12 @@ class App extends Component {
               <Main />
             </Route>
 
-            <Route path="/perfil"></Route>
+            <Route path="/perfil" component={PerfilContainer}></Route>
             <Route path="/reportes"></Route>
             <Route path="/historial"></Route>
             <Route path="/seguirCaso"></Route>
             <Route path="/sobreNos"></Route>
-            <Route path="/ayuda"></Route>
+            <Route path="/ayuda" component={HelpData}></Route>
           </Switch>
         </Router>
       </div>
