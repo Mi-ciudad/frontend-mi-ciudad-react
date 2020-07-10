@@ -15,7 +15,7 @@ class SideBar extends React.Component {
                 <div class="sidebar-menu"
                     id="sidebar-menu">
                     <figure>
-                        <img src="../../assets/images/Logo-1.png" />
+                        <img src="../../assets/Logo-1.png" />
                     </figure>
                     <ul>
                         <li>
