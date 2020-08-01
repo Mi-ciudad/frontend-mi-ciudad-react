@@ -9,12 +9,16 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import HelpData from "./components/HelpData";
 import PerfilContainer from "./pages/Perfil";
+import LoginComponent from "./components/LoginComponent";
+import Register from "./components/Register";
+import RecoverPasswordComponent from "./components/RecoverPasswordComponent";
 
 class App extends Component {
   render() {
     return (
-      <div className="content-my-city">{" "}{/*Este div hay corregirlo*/}
-        
+      <div className="content-my-city">
+        {" "}
+        {/*Este div hay corregirlo*/}
         <SideBar></SideBar>
         <Router>
           <Switch>
@@ -35,4 +39,16 @@ class App extends Component {
   }
 }
 
-export default App;
+const MainRouter = () => {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/login" component={LoginComponent}></Route>
+        <Route exact path="/register" component={Register}></Route>
+        <Route exact path="/recover-password" component={RecoverPasswordComponent}></Route>
+        <Route path="/" component={App} />
+      </Switch>
+    </Router>
+  );
+};
+export default MainRouter;
