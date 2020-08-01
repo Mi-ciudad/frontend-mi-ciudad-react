@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import './styles.scss';
 
+import PhotoProfile from '../../assets/images/fot-profil.png';
+
+
 const PostMaker = ({ setReports, reports }) => {
   const [description, setDescription] = useState("");
 
@@ -15,17 +18,42 @@ const PostMaker = ({ setReports, reports }) => {
 
   return (
     <div className="report">
-    <div className="profile">
-        <figure>
-            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQG_I-Df7T2sRQ/profile-displayphoto-shrink_400_400/0?e=1601510400&v=beta&t=0S3y1fqzlSjpjEClXTrtPv8lqKZy34O82-98QPfL6ZU"></img>
-        </figure>
-    </div>
-      <div className="description-report">
-        <textarea value={description} onChange={(e) => setDescription(e.target.value)}
-        ></textarea>
+      <div className="top-report">
+        <div className="profile">
+          <figure>
+            <img src={PhotoProfile} alt='Algo Lindo' />                
+          </figure>
+        </div>
+        <div className="id">#122333</div>
       </div>
-      <div className="btn" onClick={createReports}>
-        <button className="btn-public">publicar</button>
+    
+      <div className="description-report">
+        <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Ingrese la descripcion"></textarea>
+      </div>
+      
+      <div className="lower-items">
+        <ul>
+            <li>
+              <a href="#">
+                  <i class="fas fa-cogs settings"></i>
+              </a>
+          </li>
+
+            <li>
+              <a href="#">
+                  <i class="fas fa-camera camera"></i>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="fas fa-map-marker-alt map-marker"></i>
+              </a>
+            </li>
+          </ul>
+          <div className="btn" onClick={createReports}>
+            <button className="btn-public">Publicar</button>
+          </div>
       </div>
     </div>
   );

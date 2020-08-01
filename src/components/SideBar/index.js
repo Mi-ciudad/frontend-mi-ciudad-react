@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Icon from '../../assets/images/Logo-1.png';
+
 
 class SideBar extends React.Component {
     render() {
@@ -15,7 +17,7 @@ class SideBar extends React.Component {
                 <div class="sidebar-menu"
                     id="sidebar-menu">
                     <figure>
-                        <img src="../../assets/Logo-1.png" />
+                        <img src={Icon} alt='Algo Lindo' /> 
                     </figure>
                     <ul>
                         <li>
@@ -56,7 +58,7 @@ class SideBar extends React.Component {
                         </li>
 
                         <li class="cerrar-sesion">
-                            <a href="#">
+                            <a href="/login">
                                 <i class="fas fa-sign-out-alt"></i> Cerrar sesión
                             </a>
                         </li>

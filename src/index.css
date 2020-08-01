@@ -693,24 +693,22 @@ body::selection {
 
 /*help section*/
 
+.help-section{
+  justify-content: center;
+}
+
 .help-section .help-card{
   width: 70%; 
   height: 110px; 
-  background: #8c72ae; 
   border-radius: 12px; 
   cursor: pointer; 
-  box-shadow: 1px 1px 7px 0px black; 
   transition: all 1s; 
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 70px;
+  margin-top: 40px;
+  border: #1CB7EA 2px dashed;
 }
-
-.help-section .help-card:hover{ background: #5a4674; }
-.help-section .help-card:hover{ background: #5a4674; }
-.help-section .help-card:hover{ background: #5a4674; }
-.help-section .help-card:hover{ background: #5a4674; }
 
 .help-section .help-card p,
 .help-section .help-card p,
@@ -719,7 +717,7 @@ body::selection {
   font-size: 18px;
   font-weight: 500; 
   text-align: center; 
-  color: #ffffff; 
+  color: #1CB7EA; 
   font-weight: bold;
 }
 

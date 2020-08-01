@@ -29,7 +29,7 @@ const LoginComponent = () =>  {
                        </div>
 
                        <div className="btn-send">
-                           <button>Ingresar</button>
+                           <a href="/main">Ingresar</a>
                        </div>
 
                        <div className="recover-password">
