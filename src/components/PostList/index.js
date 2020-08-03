@@ -16,6 +16,7 @@ const PostList = ({reports}) =>  {
                                 <figure>
                                     <img src={PhotoProfile} alt='Algo Lindo' />                
                                 </figure>
+                                <p className="userName">Tiziana Tironi</p>
                                 </div>
                                 <div className="id">#122333</div>
                             </div>

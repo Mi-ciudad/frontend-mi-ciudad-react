@@ -2,14 +2,16 @@ import React from 'react';
 import './styles.scss';
 
 import DefaultPicture from '../../assets/images/mock-phone.png';
+import Mancha from '../../assets/images/manchar.svg';
+
 
 const Register = () =>  {
         
         return (    
            <div className="container-login">
                <div className="content-left">
-                   
-                   <img src={DefaultPicture} alt='Algo Lindo' />                
+                    <img src={Mancha} alt='Algo Lindo' className="img-mancha" />                
+                    <img src={DefaultPicture} alt='Algo Lindo' className="phone" />       
                </div>
 
                <div className="content-right">

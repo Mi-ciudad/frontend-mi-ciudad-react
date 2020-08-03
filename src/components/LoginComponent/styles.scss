@@ -9,8 +9,15 @@
         align-items: center;
         display: flex;
 
-        img{
+        .phone{
             width: 310px;
+            z-index: 1;
+        }
+
+        .img-mancha{
+            position: absolute;
+            width: 420px;
+            top: 0px;
         }
     }
 
@@ -46,12 +53,13 @@
 
         }
 
-        .login-form{
+        .login-f{
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 47vh;
 
             .box{
                 display: flex;

@@ -9,8 +9,15 @@
         align-items: center;
         display: flex;
 
-        img{
+        .phone{
             width: 310px;
+            z-index: 1;
+        }
+
+        .img-mancha{
+            position: absolute;
+            width: 420px;
+            top: 0px;
         }
     }
 
@@ -53,6 +60,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 57vh;
+            overflow-y: auto;
             // overflow-y: auto;
             // padding-top: 177px;
 

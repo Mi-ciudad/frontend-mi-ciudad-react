@@ -17,11 +17,17 @@
 
         .profile{
             width: 100%;
+            display: flex;
 
             figure{
                 img{
                     width: 50px;
                 }
+            }
+
+            p{
+                font-weight: bold;
+                padding: 16px 10px;
             }
         }
         .id{

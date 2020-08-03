@@ -222,8 +222,8 @@ body::selection {
 }
 
 .sidebar-content{
-  width: 270px;
-  height: 100vh;
+  /* width: 270px; */
+  /* height: 100vh; */
 }
 
 .content-my-city .sidebar-content .login .card-login{ 
@@ -376,7 +376,7 @@ body::selection {
   background: #1CB7EA; 
   display: flex;
   flex-direction: column; 
-  /* transform: translate(0);  */
+  transform: translate(0); 
   /* transition: all 0.3s ease;  */
 }
 
