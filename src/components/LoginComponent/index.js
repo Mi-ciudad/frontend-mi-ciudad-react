@@ -34,7 +34,8 @@ const LoginComponent = () =>  {
                        </div>
 
                        <div className="recover-password">
-                           <a href="#">Recuperar contraseña</a>
+                           {/* <a href="#">Recuperar contraseña</a> */}
+                           <a href="/Register">Registrarme</a>
                        </div>
                     </div>
                </div>
