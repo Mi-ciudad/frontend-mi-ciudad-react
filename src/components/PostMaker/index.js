@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import './styles.scss';
 
 import PhotoProfile from '../../assets/images/fot-profil.png';
+import { UserContext } from "../../context/User";
 
 // state = {
 //   descripcion:"",
@@ -26,12 +27,21 @@ import PhotoProfile from '../../assets/images/fot-profil.png';
 // es lo mismo que es this.algo
 
 const PostMaker = ({ setReports, reports }) => {
+  const context = useContext(UserContext)
   const [description, setDescription] = useState("");
+  const [image, setImage] = useState(null)
+
+  const onImageChange = event => {
+    if (event.target.files && event.target.files[0]) {
+      let img = event.target.files[0];
+      setImage(URL.createObjectURL(img))
+    }
+  };
 
   // Esto es para que el user no pueda mandar el reporte si tiene menos de 3 palabras, ademas publica el reporte
   const createReports = () => {
     if (description.length > 3) {
-      setReports([...reports, { description }]);
+      setReports([...reports, { description, image }]);
       setDescription('')
 
     }
@@ -45,7 +55,7 @@ const PostMaker = ({ setReports, reports }) => {
           <figure>
             <img src={PhotoProfile} alt='Algo Lindo' />                
           </figure>
-          <p className="userName">Tiziana Tironi</p>
+          <p className="userName">{context.user}</p>
         </div>
         <div className="id">#122333</div>
       </div>
@@ -53,6 +63,9 @@ const PostMaker = ({ setReports, reports }) => {
       <div className="description-report">
         {/* aca se utiliza el hook de arriba, se le pasa la funcion de onChange={setDescription} para el cambio de estado */}
         <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Ingrese la descripcion"></textarea>
+
+        { image && 
+        <img src={image} style={{ width: 200, height: 200}}/>}
       </div>
       
       <div className="lower-items">
@@ -64,9 +77,10 @@ const PostMaker = ({ setReports, reports }) => {
           </li>
 
             <li>
-              <a href="#">
+              {/* <a href="#">
                   <i class="fas fa-camera camera"></i>
-              </a>
+              </a> */}
+              <input type="file" onChange={onImageChange}></input>
             </li>
 
             <li>

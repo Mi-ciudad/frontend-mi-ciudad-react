@@ -13,20 +13,17 @@ import LoginComponent from "./components/LoginComponent";
 import Register from "./components/Register";
 import RecoverPasswordComponent from "./components/RecoverPasswordComponent";
 import AboutComponent from "./components/About";
+import UserContextProvider from "./context/User";
+import PrivateRoute from "./components/PrivateRoute";
 
 class App extends Component {
   render() {
     return (
       <div className="content-my-city">
-        {" "}
-        {/*Este div hay corregirlo*/}
         <SideBar></SideBar>
         <Router>
           <Switch>
-            <Route path="/main">
-              <Main />
-            </Route>
-
+            <PrivateRoute path="/main" component={Main} />
             <Route path="/perfil" component={PerfilContainer}></Route>
             <Route path="/reportes"></Route>
             <Route path="/historial"></Route>
@@ -43,14 +40,20 @@ class App extends Component {
 
 const MainRouter = () => {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/login" component={LoginComponent}></Route>
-        <Route exact path="/register" component={Register}></Route>
-        <Route exact path="/recover-password" component={RecoverPasswordComponent}></Route>
-        <Route path="/" component={App} />
-      </Switch>
-    </Router>
+    <UserContextProvider>
+      <Router>
+        <Switch>
+          <Route exact path="/login" component={LoginComponent}></Route>
+          <Route exact path="/register" component={Register}></Route>
+          <Route
+            exact
+            path="/recover-password"
+            component={RecoverPasswordComponent}
+          ></Route>
+          <Route path="/" component={App} />
+        </Switch>
+      </Router>
+    </UserContextProvider>
   );
 };
 export default MainRouter;
