@@ -80,6 +80,7 @@ const PostMaker = ({ setReports, reports }) => {
               {/* <a href="#">
                   <i class="fas fa-camera camera"></i>
               </a> */}
+              {/* <label for="files" class="btn"><i class="fas fa-camera camera"></i></label> */}
               <input type="file" onChange={onImageChange}></input>
             </li>
 
