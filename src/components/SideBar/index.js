@@ -47,7 +47,7 @@ class SideBar extends React.Component {
                         </li>
 
                         <li>
-                            <a href="/sobreNos">
+                            <a href="/sobreNosotros">
                                 <i class="far fa-address-card"></i>Sobre nosotros
                             </a>
                         </li>
