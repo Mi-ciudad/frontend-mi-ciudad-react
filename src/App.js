@@ -12,6 +12,7 @@ import PerfilContainer from "./pages/Perfil";
 import LoginComponent from "./components/LoginComponent";
 import Register from "./components/Register";
 import RecoverPasswordComponent from "./components/RecoverPasswordComponent";
+import AboutComponent from "./components/About";
 
 class App extends Component {
   render() {
@@ -30,8 +31,9 @@ class App extends Component {
             <Route path="/reportes"></Route>
             <Route path="/historial"></Route>
             <Route path="/seguirCaso"></Route>
-            <Route path="/sobreNos"></Route>
+            {/* <Route path="/sobreNos"></Route> */}
             <Route path="/ayuda" component={HelpData}></Route>
+            <Route path="/sobreNosotros" component={AboutComponent}></Route>
           </Switch>
         </Router>
       </div>
