@@ -2,7 +2,6 @@ import React from 'react';
 
 import Icon from '../../assets/images/Logo-1.png';
 
-
 class SideBar extends React.Component {
     render() {
         return (
@@ -41,7 +40,7 @@ class SideBar extends React.Component {
                             </a>
                         </li>
                         <li>
-                            <a href="/seguirCaso">
+                            <a href="/seguimiento-casos">
                                 <i class="far fa-building"></i> Seguimiento de casos
                             </a>
                         </li>

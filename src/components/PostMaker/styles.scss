@@ -83,6 +83,30 @@
                         }
                     }
                 }
+
+                .btn-camera-opacity{
+                    width: 23px;
+                    cursor: pointer;
+
+                    i{
+                        font-size: 21px;
+                        color: #1db7ea;
+                        transition: all 0.3s ease-in-out;
+                        cursor: pointer;
+
+                        &:hover{
+                            color: #8B6CC0;
+                        }
+                        
+                    }
+                }
+
+                .input-img{
+                    position: relative;
+                    bottom: 20px;
+                    opacity: 0;
+                    width: 17px;
+                }
                 
             }
         }
