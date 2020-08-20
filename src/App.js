@@ -21,7 +21,7 @@ class App extends Component {
   render() {
     return (
       <div className="content-my-city">
-        <SideBar></SideBar>
+        <SideBar/>
         <Router>
           <Switch>
             <PrivateRoute path="/main" component={Main} />
@@ -46,11 +46,7 @@ const MainRouter = () => {
         <Switch>
           <Route exact path="/login" component={LoginComponent}></Route>
           <Route exact path="/register" component={Register}></Route>
-          <Route
-            exact
-            path="/recover-password"
-            component={RecoverPasswordComponent}
-          ></Route>
+          <Route exact path="/recover-password" component={RecoverPasswordComponent}></Route>
           <Route path="/" component={App} />
         </Switch>
       </Router>
