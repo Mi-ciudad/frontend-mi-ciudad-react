@@ -75,11 +75,11 @@
                 a{
                     i{
                         font-size: 21px;
-                        color: #1db7ea;
+                        color: #B79AB3;
                         transition: all 0.3s ease-in-out;
 
                         &:hover{
-                            color: #8B6CC0;
+                            color: #575F72;
                         }
                     }
                 }
@@ -90,12 +90,12 @@
 
                     i{
                         font-size: 21px;
-                        color: #1db7ea;
+                        color: #B79AB3;
                         transition: all 0.3s ease-in-out;
                         cursor: pointer;
 
                         &:hover{
-                            color: #8B6CC0;
+                            color: #575F72;
                         }
                         
                     }
@@ -115,16 +115,16 @@
             button{
                 padding: 9px 20px;
                 border-radius: 6px;
-                border: 2px solid #1db7ea;
-                background: #1db7ea;
+                border: 2px solid #B79AB3;
+                background: #B79AB3;
                 color: #fff;
                 font-weight: bold;
                 transition: all 0.5s ease-in-out;
 
                 &:hover{
                     background: #fff;
-                    color:#8B6CC0;
-                    border: 2px solid #8B6CC0;
+                    color:#575F72;
+                    border: 2px solid #575F72;
                 }
             }
         }

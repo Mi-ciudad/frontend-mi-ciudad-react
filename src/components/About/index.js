@@ -30,11 +30,10 @@ const AboutComponent = () =>  {
                     <figure className="right img-right">
                         <img src={PhotoProfileTiziana} alt='Tiziana Tironi'></img>
                     </figure>
-                    
                 </div>
 
                 <div className="team-presentation person-2">
-                    <figure className="right img-barreto">
+                    <figure className="right img-left">
                         <img src={PhotoProfileDiego} alt='Diego Barreto'></img>
                     </figure>
 
@@ -43,7 +42,6 @@ const AboutComponent = () =>  {
                         <div className="line-title"></div>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words</p>
                     </div>
-                    
                 </div>
 
                 <div className="team-presentation person-1">
@@ -56,7 +54,30 @@ const AboutComponent = () =>  {
                     <figure className="right img-right">
                         <img src={PhotoProfileBelen} alt='Belen Campos'></img>
                     </figure>
+                </div>
+
+                <div className="team-presentation person-2">
+                    <figure className="right img-left">
+                        <img src={PhotoProfileDiego} alt='Diego Barreto'></img>
+                    </figure>
+
+                    <div className="left">
+                        <label className="name-team">Dana Castroman</label>
+                        <div className="line-title"></div>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words</p>
+                    </div>
+                </div>
+
+                <div className="team-presentation person-1">
+                    <div className="left">
+                        <label className="name-team">Lucia Anza</label>
+                        <div className="line-title"></div>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words</p>
+                    </div>
                     
+                    <figure className="right img-right">
+                        <img src={PhotoProfileBelen} alt='Belen Campos'></img>
+                    </figure>
                 </div>
             </section>                
         )
