@@ -11,7 +11,6 @@ const PostMaker = ({ setReports, reports }) => {
     if (description.length > 3) {
       setReports([...reports, { description }]);
       setDescription('')
-
     }
   };
   console.log(description, reports);
