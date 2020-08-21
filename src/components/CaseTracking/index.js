@@ -1,5 +1,7 @@
 import React, {useContext, useState} from 'react';
 import './styles.scss';
+import '../../assets/css/reset.css';
+
 
 const CaseTrackingComponent = () =>  {
    

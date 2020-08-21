@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.scss';
+import '../../assets/css/reset.css';
 
 import DefaultPicture from '../../assets/images/mock-phone.png';
 import Mancha from '../../assets/images/manchar.svg';

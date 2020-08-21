@@ -1,6 +1,8 @@
 import React from 'react';
+import '../../assets/css/reset.css';
 
-import Icon from '../../assets/images/Logo-1.png';
+
+import Icon from '../../assets/images/Logo-trasnparent.png';
 
 class SideBar extends React.Component {
     render() {
