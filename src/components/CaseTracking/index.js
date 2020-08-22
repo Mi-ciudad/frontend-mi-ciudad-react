@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React from 'react';
 import './styles.scss';
 import '../../assets/css/reset.css';
 import '../../assets/css/mobile.css';

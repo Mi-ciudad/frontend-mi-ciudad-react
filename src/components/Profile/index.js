@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../assets/css/mobile.css';
-import '.styles.scss';
 
 export default function Perfil() {
     return (

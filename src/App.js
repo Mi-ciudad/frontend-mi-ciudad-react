@@ -16,19 +16,20 @@ import AboutComponent from "./components/About";
 import UserContextProvider from "./context/User";
 import PrivateRoute from "./components/PrivateRoute";
 import CaseTrackingComponent from "./components/CaseTracking";
+import MenuMobile from "./components/SideBar/MenuMobile";
 
 class App extends Component {
   render() {
     return (
       <div className="content-my-city">
-        <SideBar/>
+        { window.innerWidth > 920 ? <SideBar/> : <MenuMobile/> }
         <Router>
           <Switch>
             <PrivateRoute path="/main" component={Main} />
             <Route path="/profile" component={PerfilContainer}></Route>
             <Route path="/reports"></Route>
             <Route path="/history"></Route>
-            <Route path="/traking-case" component={CaseTrackingComponent}></Route>
+            <Route path="/tracking-case" component={CaseTrackingComponent}></Route>
             {/* <Route path="/sobreNos"></Route> */}
             <Route path="/help" component={HelpData}></Route>
             <Route path="/about-us" component={AboutComponent}></Route>

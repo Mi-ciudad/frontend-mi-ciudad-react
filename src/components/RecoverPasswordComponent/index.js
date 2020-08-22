@@ -34,8 +34,6 @@ const RecoverPasswordComponent = () =>  {
                </div>
            </div>
         )
-
-
 }
 
 export default RecoverPasswordComponent;
