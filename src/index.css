@@ -97,48 +97,6 @@ body::selection {
   bottom: 0;
 }
 
-.menu-mobile{ 
-  width: 100%; 
-  height: 70px; 
-  background: #025f80; 
-  display: none; 
-  position: fixed; 
-}
-
-.menu-mobile i{ 
-  font-size: 39px; 
-  color: #ffffff; 
-  float: right; 
-  padding-top: 14px; 
-  padding-right: 20px; 
-} 
-
-/* .content-my-city .menu-mobile .icon-menu-mobile figure{ width: 90px; float: left; } */
-
-/* arreglar el codigo de arriba */
-
-/* content - report section */
-.content{ 
-  width: 100%;
-  /* height: 100%; */
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  padding-top: 30px;
-} 
-
-/* report section */
-
-.report-section,
-.help-section,
-.profile-section{ 
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  overflow-y: auto;
-} 
-
 .content-public-report{
   width: 100%;
   display: flex;
@@ -225,39 +183,6 @@ body::selection {
 .redes-sociales ul li a:active{
   border: 1px solid #1CB7EA;
 }
-
-
-/*help section*/
-
-.help-section{
-  justify-content: center;
-}
-
-.help-section .help-card{
-  width: 70%; 
-  height: 110px; 
-  border-radius: 12px; 
-  cursor: pointer; 
-  transition: all 1s; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 40px;
-  border: #1CB7EA 2px dashed;
-}
-
-.help-section .help-card p,
-.help-section .help-card p,
-.help-section .help-card p,
-.help-section .help-card p{ 
-  font-size: 18px;
-  font-weight: 500; 
-  text-align: center; 
-  color: #1CB7EA; 
-  font-weight: bold;
-}
-
-/* profile secction */
 
 .profile-section .photo-profile{ 
    width: 100%;

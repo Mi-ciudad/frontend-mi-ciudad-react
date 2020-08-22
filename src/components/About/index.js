@@ -3,16 +3,11 @@ import './style.scss';
 import '../../assets/css/reset.css';
 import '../../assets/css/style.css';
 
-
-// import ProfileDiego from '../../assets/images/';
-// pasar el png a svg
-
-import PhotoProfileTiziana from '../../assets/images/1x/profile-tiziana.png'
-import PhotoProfileDiego from '../../assets/images/1x/profile-diego.png'
-import PhotoProfileBelen from '../../assets/images/1x/profile-belenn.png'
-import PhotoProfileDana from '../../assets/images/1x/profile-dana.png'
-
-
+import PhotoProfileTiziana from '../../assets/images/1x/profile-tiziana.png';
+import PhotoProfileDiego from '../../assets/images/1x/profile-diego.png';
+import PhotoProfileBelen from '../../assets/images/1x/profile-belenn.png';
+import PhotoProfileDana from '../../assets/images/1x/profile-dana.png';
+import PhotoProfileLucia from '../../assets/images/1x/profile-lucia.png';
 
 const AboutComponent = () =>  {
         
@@ -74,13 +69,11 @@ const AboutComponent = () =>  {
                     </div>
                     
                     <figure className="right img-right">
-                        <img src={PhotoProfileBelen} alt='Belen Campos'></img>
+                        <img src={PhotoProfileLucia} alt='Lucia Anza'></img>
                     </figure>
                 </div>
             </section>                
         )
-
-
 }
 
 export default AboutComponent;
