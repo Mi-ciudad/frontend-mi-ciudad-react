@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.scss';
+import '../../assets/css/mobile.css';
 
 const HelpData = () =>  {
 

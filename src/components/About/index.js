@@ -2,6 +2,7 @@ import React from 'react';
 import './style.scss';
 import '../../assets/css/reset.css';
 import '../../assets/css/style.css';
+import '../../assets/css/mobile.css';
 
 import PhotoProfileTiziana from '../../assets/images/1x/profile-tiziana.png';
 import PhotoProfileDiego from '../../assets/images/1x/profile-diego.png';

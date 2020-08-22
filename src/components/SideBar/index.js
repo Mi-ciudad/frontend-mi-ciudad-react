@@ -1,5 +1,7 @@
 import React from 'react';
 import '../../assets/css/reset.css';
+import './styles.scss';
+import '../../assets/css/mobile.css';
 
 
 import Icon from '../../assets/images/Logo-trasnparent.png';
@@ -7,14 +9,8 @@ import Icon from '../../assets/images/Logo-trasnparent.png';
 class SideBar extends React.Component {
     render() {
         return (
+            <>
             <div class="sidebar-content">
-
-                <div class="menu-mobile">
-                    <a href="#">
-                        <i class="fas fa-bars" id="btn-menu"></i>
-                    </a>
-                </div>
-
                 <div class="sidebar-menu"
                     id="sidebar-menu">
                     <figure>
@@ -66,6 +62,15 @@ class SideBar extends React.Component {
                     </ul>
                 </div>
             </div>
+
+            
+            <div className="menu-mobile">
+                {/* <div className="">
+                    <img src={Icon} alt="icono mi ciudad" />
+                </div> */}
+                <i class="fas fa-bars"></i>
+            </div>
+            </>
         )
     }
 

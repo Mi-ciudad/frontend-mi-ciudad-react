@@ -107,13 +107,6 @@ body::selection {
   bottom: 0;
 }
 
-.menu-mobile{ 
-  width: 100%; 
-  height: 70px; 
-  background:#192529;
-  display: none; 
-  position: fixed; 
-}
 
 .menu-mobile i{ 
   font-size: 39px; 
@@ -315,7 +308,8 @@ body::selection {
   font-weight: bold; 
   text-decoration: none;
   border-radius: 14px; 
-  transition: all 1s ease; 
+  transition: all 1s ease;
+  outline: none;
 }
 
 .report-section .public-report .items-lower ul li .btn-public:hover{ 
@@ -373,13 +367,6 @@ body::selection {
   border: 1px solid #1CB7EA;
 }
 
-/* profile secction */
-.profile-section{ 
-  padding: 0 0 0 270px; 
-  width: 100%; 
-  max-width: 100%; 
-}
-
 .profile-section .profile-img{ 
   width: 220px; 
   margin: 0 auto; 
@@ -410,31 +397,3 @@ body::selection {
   font-size: 18px; 
   color: #8d918e; 
 }
-
-
-/* MOBILE */
-
-@media screen and (max-width: 1780px) {
-
-  /* .report-section{ padding: 40px 290px 40px 560px; width: 100%; max-width: 100%; } */
-}
-
-@media screen and (max-width: 1780px) {
-
-  /* .report-section{ padding: 40px 190px 40px 400px; width: 100%; max-width: 100%; } */
-
-}
-
-@media screen and (max-width: 1280px) {
-
-  .content-my-city .sidebar-content .sidebar-menu{ position: relative; left: -360px; z-index: 9999; }
-  
-  .content-my-city .menu-mobile{ display: block; }
-
-  .report-section{ width: 80%; margin: 0 auto; }
-
-  .report-section{ padding: 30px; width: 100%; max-width: 100%; }
-
-}
-
-

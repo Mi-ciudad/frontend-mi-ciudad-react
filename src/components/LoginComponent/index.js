@@ -3,6 +3,7 @@ import './styles.scss';
 import { UserContext } from "../../context/User";
 import { useHistory } from "react-router-dom";
 import '../../assets/css/reset.css';
+import '../../assets/css/mobile.css';
 
 
 

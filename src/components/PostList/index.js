@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import "./styles.scss";
+import '../../assets/css/mobile.css';
+
 
 import PhotoProfile from "../../assets/images/fot-profil.png";
 import { UserContext } from "../../context/User";
