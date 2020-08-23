@@ -16,8 +16,8 @@
 
         .img-mancha{
             position: absolute;
-            width: 420px;
-            top: 0px;
+            width: 510px;
+            top: 20px;
         }
     }
 
@@ -48,7 +48,7 @@
             .line-title{
                 width: 50px;
                 height: 4px;
-                background-color: #61dafb;
+                background-color: #B79AB3;
             }
 
         }
@@ -78,18 +78,19 @@
                     box-shadow: rgba(0, 0, 0, 0.04) 0px 2px 13px 0px !important;
                     outline: none;
                     transition: all 1s ease-in;
-                    padding: 5px 10px
+                    padding: 5px 10px;
+                    background-color: #e7f2fe;
                 }
             }
 
             .btn-send{
                 margin: 10px 0 15px;
 
-                a{
-                    border: 2px solid #61dafb;
+                p{
+                    border: 2px solid #B79AB3;
                     padding: 14px 80px;
                     border-radius: 6px;
-                    background: #61dafb;
+                    background: #B79AB3;
                     color: #fff;
                     font-weight: bold;
                     outline: none;
@@ -99,7 +100,7 @@
 
                     &:hover{
                         background: #fff;
-                        color: #61dafb;
+                        color: #575F72;
                     }
                 }
             }
@@ -108,7 +109,7 @@
                 padding-top: 5px;
 
                 a{
-                    color: #61dafb;
+                    color: #575F72;
                     text-decoration: none;
                     padding-left: 5px;
 

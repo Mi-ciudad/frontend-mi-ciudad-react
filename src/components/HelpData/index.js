@@ -1,8 +1,7 @@
 import React from 'react'
 
-class HelpData extends React.Component{
+const HelpData = () =>  {
 
-    render(){
         return(
             <section className="help-section">
                 <div className = "help-card">
@@ -20,5 +19,5 @@ class HelpData extends React.Component{
             </section>
             )
         }
-    }
+    
 export default HelpData;

@@ -63,8 +63,10 @@ const PostMaker = ({ setReports, reports }) => {
       <div className="description-report">
         {/* aca se utiliza el hook de arriba, se le pasa la funcion de onChange={setDescription} para el cambio de estado */}
         <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Ingrese la descripcion"></textarea>
+      </div>
 
-        { image && 
+      <div className="image-section">
+      { image && 
         <img src={image} style={{ width: 200, height: 200}}/>}
       </div>
       
@@ -80,8 +82,8 @@ const PostMaker = ({ setReports, reports }) => {
               {/* <a href="#">
                   <i class="fas fa-camera camera"></i>
               </a> */}
-              {/* <label for="files" class="btn"><i class="fas fa-camera camera"></i></label> */}
-              <input type="file" onChange={onImageChange}></input>
+              <div className="btn-camera-opacity"><i class="fas fa-camera camera"></i></div>
+              <input className="input-img" type="file" onChange={onImageChange}></input>
             </li>
 
             <li>
