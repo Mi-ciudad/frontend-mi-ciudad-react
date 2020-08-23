@@ -1,0 +1,38 @@
+.help-section{
+    width: 90%;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .help-card{
+        width: 70%;
+        height: 120px;
+        background-image: linear-gradient(to left top, #a08497, #947c8c, #887481, #7c6c77, #70646c);        border-radius: 6px;
+        border: 1px solid #B79AB3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 15px 0;
+        color: #ffffff;
+        font-size: 18px;
+        // transition: all 0.5s ease-in-out;
+        -webkit-transition: background-image 0.2s ease-in-out;
+        transition: background-image 0.2s ease-in-out;
+
+        &:hover{
+            background-image: linear-gradient(to top, #a08497, #947c8c, #887481, #7c6c77, #70646c);
+        }
+    }
+}
+
+// MOBILE
+
+@media screen and (max-width: 1200px){
+    .help-section{
+        width: 100%;
+    }
+}

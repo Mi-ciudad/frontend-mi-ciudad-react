@@ -1,5 +1,7 @@
 import React from 'react';
 import './styles.scss';
+import '../../assets/css/mobile.css';
+
 
 import DefaultPicture from '../../assets/images/mock-phone.png';
 
@@ -32,8 +34,6 @@ const RecoverPasswordComponent = () =>  {
                </div>
            </div>
         )
-
-
 }
 
 export default RecoverPasswordComponent;

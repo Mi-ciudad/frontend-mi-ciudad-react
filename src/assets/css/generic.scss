@@ -9,3 +9,12 @@
     align-items: center;
     overflow-y: auto;
 }
+
+// MOBILE
+
+@media screen and (max-width: 1200px){
+   .content-generics{
+       width: 100%;
+       padding-top: 120px;
+   }
+}

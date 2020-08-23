@@ -1,5 +1,7 @@
 import React from 'react';
 import '../../assets/css/reset.css';
+import './styles.scss';
+import '../../assets/css/mobile.css';
 
 
 import Icon from '../../assets/images/Logo-trasnparent.png';
@@ -8,13 +10,6 @@ class SideBar extends React.Component {
     render() {
         return (
             <div class="sidebar-content">
-
-                <div class="menu-mobile">
-                    <a href="#">
-                        <i class="fas fa-bars" id="btn-menu"></i>
-                    </a>
-                </div>
-
                 <div class="sidebar-menu"
                     id="sidebar-menu">
                     <figure>
@@ -27,33 +22,33 @@ class SideBar extends React.Component {
                             </a>
                         </li>
                         <li>
-                            <a href="/perfil">
+                            <a href="/profile">
                                 <i class="far fa-user-circle"></i> Perfil
                             </a>
                         </li>
                         <li>
-                            <a href="/reportes">
+                            <a href="/reports">
                                 <i class="fas fa-list-ul"></i> Reportes
                             </a>
                         </li>
                         <li>
-                            <a href="/historial">
+                            <a href="/history">
                                 <i class="fas fa-history"></i> Historial
                             </a>
                         </li>
                         <li>
-                            <a href="/seguimiento-casos">
+                            <a href="/tracking-case">
                                 <i class="far fa-building"></i> Seguimiento de casos
                             </a>
                         </li>
 
                         <li>
-                            <a href="/sobreNosotros">
+                            <a href="/about-us">
                                 <i class="far fa-address-card"></i>Sobre nosotros
                             </a>
                         </li>
                         <li>
-                            <a href="/ayuda">
+                            <a href="/help">
                                 <i class="far fa-question-circle"></i> Ayuda
                             </a>
                         </li>
