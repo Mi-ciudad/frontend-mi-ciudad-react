@@ -1,5 +1,63 @@
 .profile-section{
     width: 90%;
     height: 100vh;
-    // padding-top: 80px;
+    
+    .data-tables{
+        display: flex;
+        justify-content: center;
+
+        ul{
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            li{
+                display: flex;
+                flex-direction: row;
+                padding: 10px;
+
+                .right{
+                    
+                    button{
+                        background: #B79AB3;
+                        padding: 12px;
+                        border-radius: 50%;
+                        outline: none;
+                        border: 1px solid #B79AB3;
+                        color: #ffff;
+                        font-size: 15px;
+                        transition: all 0.5s ease-in-out;
+
+                        &:hover{
+                            background: #ffff;
+                            color: #B79AB3;
+
+                        }
+
+                        i{
+                            position: relative;
+                            left: 2px;
+                        }
+                    }
+
+                }
+
+                .left{
+                    width: 70%;
+
+                    i{
+                        color: #B79AB3;
+                        font-size: 18px;
+                        margin: 0 5px;
+                    }
+
+                    input{
+                        border: none;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
 }
