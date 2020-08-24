@@ -17,6 +17,7 @@ import UserContextProvider from "./context/User";
 import PrivateRoute from "./components/PrivateRoute";
 import CaseTrackingComponent from "./components/CaseTracking";
 import MenuMobile from "./components/SideBar/MenuMobile";
+import HistoryData from "./components/HistoryData";
 
 class App extends Component {
   render() {
@@ -28,7 +29,7 @@ class App extends Component {
             <PrivateRoute path="/main" component={Main} />
             <Route path="/profile" component={PerfilContainer}></Route>
             <Route path="/reports"></Route>
-            <Route path="/history"></Route>
+            <Route path="/history" component={HistoryData}></Route>
             <Route path="/tracking-case" component={CaseTrackingComponent}></Route>
             {/* <Route path="/sobreNos"></Route> */}
             <Route path="/help" component={HelpData}></Route>
