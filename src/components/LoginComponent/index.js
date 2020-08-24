@@ -7,7 +7,7 @@ import '../../assets/css/mobile.css';
 
 
 
-import DefaultPicture from '../../assets/images/mock-phon.png';
+import DefaultPicture from '../../assets/images/mock-pho.png';
 import Mancha from '../../assets/images/manchar.svg';
 
 const LoginComponent = () =>  {
