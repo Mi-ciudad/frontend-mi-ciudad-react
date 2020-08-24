@@ -13,6 +13,8 @@ import PhotoProfileBelen from '../../assets/images/1x/profile-belenn.png';
 import PhotoProfileDana from '../../assets/images/1x/profile-dana.png';
 import PhotoProfileLucia from '../../assets/images/1x/profile-lucia.png';
 
+// import Arrow from '../../assets/images/arrow-down.svg';
+
 const AboutComponent = () =>  {
         
         return (    
@@ -40,6 +42,10 @@ const AboutComponent = () =>  {
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words</p>
                     </div>
                 </div>
+
+                {/* <div className="section-arrow">
+                    <img src={Arrow} alt="arrow"></img>
+                </div> */}
 
                 <div className="team-presentation person-1">
                     <div className="left">
