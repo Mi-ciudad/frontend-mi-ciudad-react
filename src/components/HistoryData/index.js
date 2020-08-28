@@ -11,6 +11,7 @@ const HistoryData = () =>  {
             <div className = "content">
                 <div className="report-card">
                   <div className="top-report">
+                    
                     <div className="profile">
                       
                       <figure>  
