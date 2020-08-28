@@ -13,7 +13,7 @@ const HistoryData = () =>  {
                   <div className="top-report">
                     <div className="profile">
                       
-                      <figure>
+                      <figure>  
                           <img src={PhotoProfile} alt="Algo Lindo" />
                       </figure>
                       <p className="userName">Reportado por {context.user} el dia 3 de julio de 2020</p>
