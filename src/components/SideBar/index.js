@@ -27,11 +27,6 @@ class SideBar extends React.Component {
                             </a>
                         </li>
                         <li>
-                            <a href="/reports">
-                                <i class="fas fa-list-ul"></i> Reportes
-                            </a>
-                        </li>
-                        <li>
                             <a href="/history">
                                 <i class="fas fa-history"></i> Historial
                             </a>
