@@ -6,24 +6,27 @@ import { UserContext } from "../../context/User";
 
 const HistoryData = () =>  {
     const context = useContext(UserContext);
-        return (    
-          <section className = "history-section">
+        return (
+          <section className = "presentation">
             <div className = "content">
                 <div className="report-card">
                   <div className="top-report">
+                    
                     <div className="profile">
-                      <figure>
+                      
+                      <figure>  
                           <img src={PhotoProfile} alt="Algo Lindo" />
                       </figure>
-                      {/* <p className="userName">Reportado por {context.user} el dia 3 de julio de 2020</p> */}
-                      {/* <p className ="report-state">Estado:terminado</p> */}
+                      <p className="userName">Reportado por {context.user} el dia 3 de julio de 2020</p>
+                      <p className ="report-state">Estado:terminado</p> 
                     </div>
-                  <div className="id">#122333</div>
+                    <div className="id">#122333</div>
+                    
                   </div>
                 </div>       
-
-                </div>
-            </section>
+            </div>
+          </section>
+          
                             
         )}
 export default HistoryData;
