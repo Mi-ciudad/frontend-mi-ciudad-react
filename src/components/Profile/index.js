@@ -15,7 +15,7 @@ export default function Perfil() {
                 <ul>
                     <li>
                         <div className="left">
-                            <i class="fas fa-user"></i>                       
+                            <i classNamev="fas fa-user"></i>                       
                             <input type="text" placeholder="Nombre & Apellido"></input>
                         </div>
                         <div className="right">
