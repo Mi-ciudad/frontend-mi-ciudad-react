@@ -51,7 +51,7 @@ const PostMaker = ({ setReports, reports }) => {
 
       <div className="image-section">
       { image && 
-        <img src={image} alt="upload" style={{ width: 200, height: 200}}/>}
+        <img src={image} alt="upload" style={{ width: 100, height: 100}}/>}
       </div>
       
       <div className="lower-items">

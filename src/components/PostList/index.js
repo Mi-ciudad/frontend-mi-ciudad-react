@@ -27,13 +27,18 @@ const PostList = ({ reports }) => {
 
             <div className="description-report">
               <p>{report.description}</p>
-              {report.image && (
-                <img src={report.image} alt="report" style={{ width: 200, height: 200 }}  />
+             
+            </div>
+
+            <div className="image-section">
+            {report.image && (
+                <img src={report.image} alt="report" style={{ width: 100, height: 100 }}  />
               )}
             </div>
 
+
             <div className="location-report" key={index}>
-            <i class="fas fa-map-marker-alt map-marker"></i>
+            {/* <i class="fas fa-map-marker-alt map-marker"></i> */}
               <p>{report.location}</p>
             </div>
 
