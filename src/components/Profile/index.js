@@ -7,7 +7,7 @@ export default function Perfil() {
         <div className="profile-section">
             <div className="photo-profile">
                 <figure>
-                    <img src="https://avatars0.githubusercontent.com/u/49923002?s=400&v=4" />
+                    <img src="https://avatars0.githubusercontent.com/u/49923002?s=400&v=4" alt="profile" />
                 </figure>
             </div>
 
