@@ -1,6 +1,6 @@
 .report{
     width: 78%;
-    height: 32vh;
+    // height: 32vh;
     border-radius: 18px;
     justify-content: flex-start;
     display: flex;
@@ -55,6 +55,20 @@
         }
     }
 
+    .location-report{
+        width: 100%;
+        display: none;
+
+        textarea{
+            width: 100%;
+            height: 100%;
+            resize: none;
+            border: none;
+            outline: none;
+            padding: 20px;
+        }
+    }
+
     .lower-items{
         width: 100%;
         // background: green;
@@ -72,7 +86,11 @@
 
             li{
                 margin: 10px;
-                a{
+                button{
+                    border: none;
+                    background: #fff;
+                    outline: none;
+
                     i{
                         font-size: 21px;
                         color: #B79AB3;
@@ -120,6 +138,7 @@
                 color: #fff;
                 font-weight: bold;
                 transition: all 0.5s ease-in-out;
+                outline: none;
 
                 &:hover{
                     background: #fff;

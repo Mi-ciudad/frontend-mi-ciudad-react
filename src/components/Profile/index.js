@@ -7,7 +7,7 @@ export default function Perfil() {
         <div className="profile-section">
             <div className="photo-profile">
                 <figure>
-                    <img src="https://avatars0.githubusercontent.com/u/49923002?s=400&v=4" />
+                    <img src="https://avatars0.githubusercontent.com/u/49923002?s=400&v=4" alt="profile" />
                 </figure>
             </div>
 
@@ -15,7 +15,7 @@ export default function Perfil() {
                 <ul>
                     <li>
                         <div className="left">
-                            <i class="fas fa-user"></i>                       
+                            <i class="fas fa-user-alt"></i>                       
                             <input type="text" placeholder="Nombre & Apellido"></input>
                         </div>
                         <div className="right">

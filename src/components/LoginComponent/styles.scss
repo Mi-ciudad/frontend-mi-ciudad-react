@@ -17,7 +17,7 @@
         .img-mancha{
             position: absolute;
             width: 510px;
-            top: 20px;
+            top: 30px;
         }
     }
 
@@ -102,6 +102,7 @@
                     &:hover{
                         background: #fff;
                         color: #575F72;
+                        border: 2px solid #575F72;
                     }
                 }
             }

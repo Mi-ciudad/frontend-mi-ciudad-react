@@ -11,7 +11,8 @@ const PostList = ({ reports }) => {
 
   return (
     <div className="container-reports">
-      {reports.map((report) => {
+      {reports.map((report, index ) => {
+        console.log(report);
         return (
           <div className="upload-report">
             <div className="top-report">
@@ -26,23 +27,33 @@ const PostList = ({ reports }) => {
 
             <div className="description-report">
               <p>{report.description}</p>
-              {report.image && (
-                <img src={report.image} style={{ width: 200, height: 200 }} />
+             
+            </div>
+
+            <div className="image-section">
+            {report.image && (
+                <img src={report.image} alt="report" style={{ width: 100, height: 100 }}  />
               )}
+            </div>
+
+
+            <div className="location-report" key={index}>
+            {/* <i class="fas fa-map-marker-alt map-marker"></i> */}
+              <p>{report.location}</p>
             </div>
 
             <div className="lower-items">
               <ul>
                 <li>
-                  <a href="#">
+                  <button>
                     <i class="fas fa-thumbs-up like"></i>
-                  </a>
+                  </button>
                 </li>
 
                 <li>
-                  <a href="#">
+                  <button>
                     <i class="fas fa-comment comments"></i>
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
