@@ -17,8 +17,9 @@ const HistoryData = () =>  {
                       <figure>  
                           <img src={PhotoProfile} alt="Algo Lindo" />
                       </figure>
-                      <p className="userName">Reportado por {context.user} el dia 3 de julio de 2020</p>
-                      <p className ="report-state">Estado:terminado</p> 
+                      <p className="userName">Publicado por @Tiziana {context.user}</p>
+                      <p className="date">El dia 3 de julio de 2020</p>
+                      <p className ="report-state">Aprobado</p>
                     </div>
                     <div className="id">#122333</div>
                     
