@@ -102,18 +102,14 @@ const PostMaker = ({ setReports, reports }) => {
             
         </div>
         <div className="form-right">
-        <div className="box-input">
-            <label>Ver info</label>
-            <input type="text" placeholder="Centro"></input>
-          </div>
-          <div className="box-input">
-            <label>Ver info</label>
-            <input type="text" placeholder="Paraguay"></input>
-          </div>
           <div className="box-input">
             <label>Comentarios</label>
-            <input className="comment-box" type="text" placeholder="loremspi"></input>
+            <textarea className="comment-box" placeholder="loremspi"></textarea>
           </div>
+          <div className="box-btn">
+            <button>Guardar</button>
+          </div>
+          
         </div>
       </div>
     </div>  
