@@ -12,7 +12,6 @@ const PostMaker = ({ setReports, reports }) => {
   const [location, setLocation] = useState("");
   const [image, setImage] = useState(null);
   const [modal, setModal] = useState(false);
-  const [closeModal, setCloseModal] = useState(false);
 
   const onImageChange = event => {
     if (event.target.files && event.target.files[0]) {
@@ -84,13 +83,37 @@ const PostMaker = ({ setReports, reports }) => {
     </div>
     <div className="background-opacity-modal" style={{display: modal ? "flex" : "none" }}>
       <div className="modal">
-        <button onClick={()=> setCloseModal(!closeModal)}>
+        {/* <button onClick={()=> setCloseModal(!closeModal)}>
           <i class="fas fa-times"></i>
-        </button>
+        </button> */}
         <div className="form-left">
-            <input type="text" placeholder="Barrio"></input>
-            <input type="text" placeholder="Calle"></input>
-            <input type="text" placeholder="Referencia"></input>
+          <div className="box-input">
+            <label>Barrio</label>
+            <input type="text" placeholder="Centro"></input>
+          </div>
+          <div className="box-input">
+            <label>Calle</label>
+            <input type="text" placeholder="Paraguay"></input>
+          </div>
+          <div className="box-input">
+            <label>Referencia</label>
+            <input type="text" placeholder="loremspi"></input>
+          </div>
+            
+        </div>
+        <div className="form-right">
+        <div className="box-input">
+            <label>Ver info</label>
+            <input type="text" placeholder="Centro"></input>
+          </div>
+          <div className="box-input">
+            <label>Ver info</label>
+            <input type="text" placeholder="Paraguay"></input>
+          </div>
+          <div className="box-input">
+            <label>Comentarios</label>
+            <input className="comment-box" type="text" placeholder="loremspi"></input>
+          </div>
         </div>
       </div>
     </div>  
