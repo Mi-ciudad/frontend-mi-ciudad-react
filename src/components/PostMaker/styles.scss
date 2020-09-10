@@ -149,3 +149,21 @@
         }
     }
 }
+
+.background-opacity-modal{
+    justify-content: center;
+    align-items: center;
+    background: #000000b5;
+    width: 81.3%;
+    height: 789px;
+    position: absolute;
+    top: 0px;
+    right: 0;
+
+    .modal{
+        width: 700px;
+        height: 540px;
+        background: #fff;
+        border-radius: 6px;
+    }
+}

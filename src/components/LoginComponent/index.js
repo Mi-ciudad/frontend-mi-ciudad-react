@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import '../../assets/css/reset.css';
 import '../../assets/css/mobile.css';
 
-import DefaultPicture from '../../assets/images/mock-pho.png';
+import DefaultPicture from '../../assets/images/mock-phone-rea.png';
 import Mancha from '../../assets/images/manchar.svg';
 
 const LoginComponent = () =>  {

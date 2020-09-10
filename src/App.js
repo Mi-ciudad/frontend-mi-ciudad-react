@@ -31,7 +31,6 @@ class App extends Component {
             <Route path="/reports"></Route>
             <Route path="/history" component={HistoryData}></Route>
             <Route path="/tracking-case" component={CaseTrackingComponent}></Route>
-            {/* <Route path="/sobreNos"></Route> */}
             <Route path="/help" component={HelpData}></Route>
             <Route path="/about-us" component={AboutComponent}></Route>
           </Switch>

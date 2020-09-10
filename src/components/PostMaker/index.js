@@ -10,7 +10,9 @@ const PostMaker = ({ setReports, reports }) => {
   const context = useContext(UserContext)
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
-  const [image, setImage] = useState(null)
+  const [image, setImage] = useState(null);
+  const [modal, setModal] = useState(false);
+  const [closeModal, setCloseModal] = useState(false);
 
   const onImageChange = event => {
     if (event.target.files && event.target.files[0]) {
@@ -27,9 +29,11 @@ const PostMaker = ({ setReports, reports }) => {
 
     }
   };
+
   console.log(description, reports, location);
 
   return (
+    <>
     <div className="report">
       <div className="top-report">
         <div className="profile">
@@ -38,7 +42,7 @@ const PostMaker = ({ setReports, reports }) => {
           </figure>
           <p className="userName">{context.user}</p>
         </div>
-        <div className="id">#122333</div>
+        {/* <div className="id">#122333</div> */}
       </div>
     
       <div className="description-report">
@@ -68,7 +72,7 @@ const PostMaker = ({ setReports, reports }) => {
           </li>
 
           <li>
-            <button>
+            <button onClick={()=> setModal(!modal)}>
               <i class="fas fa-map-marker-alt map-marker"></i>
             </button>
           </li>
@@ -78,6 +82,19 @@ const PostMaker = ({ setReports, reports }) => {
         </div>
       </div>
     </div>
+    <div className="background-opacity-modal" style={{display: modal ? "flex" : "none" }}>
+      <div className="modal">
+        <button onClick={()=> setCloseModal(!closeModal)}>
+          <i class="fas fa-times"></i>
+        </button>
+        <div className="form-left">
+            <input type="text" placeholder="Barrio"></input>
+            <input type="text" placeholder="Calle"></input>
+            <input type="text" placeholder="Referencia"></input>
+        </div>
+      </div>
+    </div>  
+    </>
   );
 };
 

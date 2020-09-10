@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PostMaker from "../components/PostMaker";
 import PostList from "../components/PostList";
-import '../assets/css/generic.scss'
+import '../assets/css/generic.scss';
 
 const Main = () => {
 
