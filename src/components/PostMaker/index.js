@@ -99,8 +99,8 @@ const PostMaker = ({ setReports, reports }) => {
             <label>Referencia</label>
             <input type="text" placeholder="loremspi"></input>
           </div>
-            
         </div>
+        
         <div className="form-right">
           <div className="box-input">
             <label>Comentarios</label>
@@ -109,7 +109,6 @@ const PostMaker = ({ setReports, reports }) => {
           <div className="box-btn">
             <button>Guardar</button>
           </div>
-          
         </div>
       </div>
     </div>  
