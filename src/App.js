@@ -45,7 +45,7 @@ const MainRouter = () => {
     <UserContextProvider>
       <Router>
         <Switch>
-          <Route exact path="/login" component={LoginComponent}></Route>
+          <Route exact path="/" component={LoginComponent}></Route>
           <Route exact path="/register" component={Register}></Route>
           <Route exact path="/recover-password" component={RecoverPasswordComponent}></Route>
           <Route path="/" component={App} />

@@ -49,7 +49,7 @@ class SideBar extends React.Component {
                         </li>
 
                         <li class="cerrar-sesion">
-                            <a href="/login">
+                            <a href="/">
                                 <i class="fas fa-sign-out-alt"></i> Cerrar sesión
                             </a>
                         </li>
