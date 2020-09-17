@@ -22,16 +22,13 @@ class App extends Component {
         <SideBar></SideBar>
         <Router>
           <Switch>
-            <Route path="/main">
-              <Main />
-            </Route>
-
-            <Route path="/perfil" component={PerfilContainer}></Route>
-            <Route path="/reportes"></Route>
-            <Route path="/historial"></Route>
-            <Route path="/seguirCaso"></Route>
-            <Route path="/sobreNos"></Route>
-            <Route path="/ayuda" component={HelpData}></Route>
+            <PrivateRoute path="/main" component={Main} />
+            <Route path="/profile" component={PerfilContainer}></Route>
+            <Route path="/reports"></Route>
+            <Route path="/history" component={HistoryData}></Route>
+            <Route path="/tracking-case" component={CaseTrackingComponent}></Route>
+            <Route path="/help" component={HelpData}></Route>
+            <Route path="/about-us" component={AboutComponent}></Route>
           </Switch>
         </Router>
       </div>
