@@ -24,11 +24,11 @@ const Register = () =>  {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                "email": `'${email}'`,
-                "passwd": `'${password}'`,
+                "email": `${email}`,
+                "passwd": `${password}`,
                 "ci" : `${cedula}`,
-                "nombre" : `'${nombre}'`,
-                "apellido" : `' ${apellido}'`,
+                "nombre" : `${nombre}`,
+                "apellido" : `${apellido}`,
                 "tipoUsuario" : "Usuario"
             })
         };
