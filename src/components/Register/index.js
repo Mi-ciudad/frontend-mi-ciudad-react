@@ -26,12 +26,17 @@ const Register = () =>  {
                    <div className="login-form">
                        
                        <div className="input-name box">
-                           <label>Nombre completo</label>
+                           <label>Nombre</label>
                            <input type="text" placeholder="Nombre completo"></input>
                        </div>
                        <div className="input-user-name box">
-                           <label>Nombre de usuario</label>
+                           <label>Apellido</label>
                            <input type="text" placeholder="UserName"></input>
+                       </div>
+
+                       <div className="input-user-ci box">
+                           <label>Cedula</label>
+                           <input type="text" placeholder="Cedula"></input>
                        </div>
                        <div className="input-email box">
                            <label>Email</label>
@@ -39,13 +44,7 @@ const Register = () =>  {
                        </div>
 
                        <div className="input-password box">
-                           <label>contraseña</label>
-                           <input type="password" placeholder="**********"></input>
-                       </div>
-
-                       
-                       <div className="input-password-repet box">
-                           <label>Repetir contraseña</label>
+                           <label>Contraseña</label>
                            <input type="password" placeholder="**********"></input>
                        </div>
 
