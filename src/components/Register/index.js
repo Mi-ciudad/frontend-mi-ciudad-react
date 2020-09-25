@@ -44,11 +44,7 @@ const Register = () =>  {
                        </div>
 
                        <div className="input-password box">
-<<<<<<< HEAD
                            <label>Contraseña</label>
-=======
-                           <label>contraseña</label>
->>>>>>> f1b912decdf3315352f3ab85ae3b713df7f4cc80
                            <input type="password" placeholder="**********"></input>
                        </div>
 
