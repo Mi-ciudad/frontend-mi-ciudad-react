@@ -25,7 +25,7 @@ const LoginComponent = () => {
             })
         };
 
-        fetch('http://localhost:5000/users/login', requestOptions)
+        fetch('http://localhost:5000/login', requestOptions)
             .then(res => res.json())
             .then((result) => {
                 if (result.status === 200) {
