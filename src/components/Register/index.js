@@ -55,9 +55,7 @@ const Register = () =>  {
         context.setUser(nombre + " " + apellido);
         history.push("/main")
     }
-    
-    
-    
+
 
         return (    
            <div className="container-login">
