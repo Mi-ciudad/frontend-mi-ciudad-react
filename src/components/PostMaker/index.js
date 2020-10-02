@@ -12,6 +12,9 @@ const PostMaker = ({ setReports, reports }) => {
   const [location, setLocation] = useState("");
   const [image, setImage] = useState(null);
   const [modal, setModal] = useState(false);
+  const [barrio,setBarrio] = useState();
+  const [reference,setReference] = useState();
+  const [calle,setCalle] = useState("");
 
   const onImageChange = event => {
     if (event.target.files && event.target.files[0]) {
@@ -25,6 +28,34 @@ const PostMaker = ({ setReports, reports }) => {
     if (description.length > 3) {
       setReports([...reports, { description, image, location }]);
       setDescription('')
+
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            "description": ``,
+            "direction": ``,
+            "state" : ``,
+            "ci" : ``
+        })
+    };
+
+    fetch('http://localhost:5000/reports/createReport', requestOptions)
+        .then(res => res.json())
+        .then((result) => {
+            if (result.status === 200) {
+                
+            } else {
+            }
+        },
+            (error) => {
+                console.log(error)
+            }
+        )
+        .catch(console.log(requestOptions))
+
+
+
 
     }
   };
@@ -48,9 +79,9 @@ const PostMaker = ({ setReports, reports }) => {
         <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Ingrese la descripcion"></textarea>
       </div>
 
-      <div className="location-report">
+     { /*<div className="location-report">
         <textarea value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Ingrese la ubicacion"></textarea>
-      </div>
+      </div> */}
 
       <div className="image-section">
       { image && 
