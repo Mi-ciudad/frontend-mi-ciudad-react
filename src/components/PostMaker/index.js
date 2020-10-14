@@ -3,7 +3,7 @@ import './styles.scss';
 import '../../assets/css/mobile.css';
 
 
-import PhotoProfile from '../../assets/images/fot-profil.png';
+import PhotoProfile from '../../assets/images/default-profile.png';
 import { UserContext } from "../../context/User";
 
 const PostMaker = ({ setReports, reports }) => {
@@ -119,23 +119,8 @@ const PostMaker = ({ setReports, reports }) => {
         </button> */}
         <div className="form-left">
           <div className="box-input">
-            <label>Barrio</label>
-            <input type="text" placeholder="Centro"></input>
-          </div>
-          <div className="box-input">
-            <label>Calle</label>
-            <input type="text" placeholder="Paraguay"></input>
-          </div>
-          <div className="box-input">
-            <label>Referencia</label>
-            <input type="text" placeholder="loremspi"></input>
-          </div>
-        </div>
-        
-        <div className="form-right">
-          <div className="box-input">
-            <label>Comentarios</label>
-            <textarea className="comment-box" placeholder="loremspi"></textarea>
+            <label>Ingresar la ubicacion</label>
+            <input type="text" placeholder="Avenida brasil 1204"></input>
           </div>
           <div className="box-btn">
             <button>Guardar</button>

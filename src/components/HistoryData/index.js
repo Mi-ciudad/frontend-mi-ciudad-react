@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import './styles.scss';
 
-import PhotoProfile from "../../assets/images/fot-profil.png";
+import PhotoProfile from "../../assets/images/default-profile.png";
 import { UserContext } from "../../context/User";
 
 const HistoryData = () =>  {

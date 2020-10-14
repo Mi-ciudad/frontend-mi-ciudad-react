@@ -167,9 +167,14 @@
         border-radius: 6px;
         display: flex;
         padding: 40px 5px;
+        justify-content: center;
 
         .form-left{
-            width: 50%;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
 
             .box-input{
                 width: 100%;
@@ -189,32 +194,6 @@
                     border: none;
                     box-shadow: 0px 0px 12px -2px rgba(186,186,186,0.66);
                     padding: 0 10px;
-                }
-            }
-        }
-
-        .form-right{
-            width: 50%;
-
-            .box-input{
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                padding: 10px;
-
-                label{
-                    padding: 10px 0;
-                }
-                
-                textarea{
-                    width: 90%;
-                    height: 157px;
-                    border-radius: 6px;
-                    outline: none;
-                    border: none;
-                    box-shadow: 0px 0px 12px -2px rgba(186,186,186,0.66);
-                    resize: none;
-                    padding: 10px;
                 }
             }
 
@@ -243,7 +222,6 @@
                     }
                 }
             }
-
         }
     }
 }
