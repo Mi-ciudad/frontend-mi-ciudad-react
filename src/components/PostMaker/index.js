@@ -12,82 +12,105 @@ const PostMaker = ({ setReports, reports }) => {
   const [location, setLocation] = useState("");
   const [image, setImage] = useState(null);
   const [modal, setModal] = useState(false);
-  const [barrio,setBarrio] = useState();
-  const [reference,setReference] = useState();
-  const [calle,setCalle] = useState("");
+  var ci = 0;
 
-  const onImageChange = event => {
-    if (event.target.files && event.target.files[0]) {
-      let img = event.target.files[0];
-      setImage(URL.createObjectURL(img))
-    }
-  };
 
-  // Esto es para que el user no pueda mandar el reporte si tiene menos de 3 palabras, ademas publica el reporte
-  const createReports = () => {
-    if (description.length > 3) {
-      setReports([...reports, { description, image, location }]);
-      setDescription('')
-
-      const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            "description": ``,
-            "direction": ``,
-            "state" : ``,
-            "ci" : ``
-        })
+  const getCiOfEmail = () => {
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        "email": `${context.user}`
+      })
     };
 
-    fetch('http://localhost:5000/reports/createReport', requestOptions)
-        .then(res => res.json())
-        .then((result) => {
-            if (result.status === 200) {
-                
-            } else {
-            }
-        },
-            (error) => {
-                console.log(error)
-            }
-        )
-        .catch(console.log(requestOptions))
+    fetch('http://localhost:5000/ci', requestOptions)
+      .then(res => res.json())
+      .then((result) => {
+        if (result.status === 201) { 
+          console.log(ci)
+        } else {
+          console.log("Hubo un error")
+        }
+      },
+        (error) => {
+          console.log(error)
+        }
+      )
+      .catch(console.log(requestOptions))
+  }
 
+  
 
+const onImageChange = event => {
+  if (event.target.files && event.target.files[0]) {
+    let img = event.target.files[0];
+    setImage(URL.createObjectURL(img))
+  }
+};
 
+// Esto es para que el user no pueda mandar el reporte si tiene menos de 3 palabras, ademas publica el reporte
+const createReports = () => {
+  if (description.length > 3) {
+    setReports([...reports, { description, image, location }]);
+    setDescription('')
 
-    }
-  };
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        "descripcion": `${description}`,
+        "direc": `${location}`,
+        "estado": "Esperando aprobación",
+        "ci": `${ci}`
+      })
+    };
 
-  console.log(description, reports, location);
+    fetch('http://localhost:5000/createReport', requestOptions)
+      .then(res => res.json())
+      .then((result) => {
+        if (result.status === 201) {
+          console.log(result.ci)
+        } else {
+          console.log("Hubo errores verificar")
+        }
+      },
+        (error) => {
+          console.log(error)
+        }
+      )
+      .catch(console.log(requestOptions))
+  }
+};
 
-  return (
-    <>
+console.log(description,/* reports,*/ location);
+
+return (
+  <>
     <div className="report">
       <div className="top-report">
         <div className="profile">
           <figure>
-            <img src={PhotoProfile} alt='Algo Lindo' />                
+            <img src={PhotoProfile} alt='Algo Lindo'/>
           </figure>
           <p className="userName">{context.user}</p>
         </div>
         {/* <div className="id">#122333</div> */}
       </div>
-    
+
       <div className="description-report">
         <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Ingrese la descripcion"></textarea>
       </div>
 
-     { /*<div className="location-report">
+      { /*<div className="location-report">
         <textarea value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Ingrese la ubicacion"></textarea>
       </div> */}
 
       <div className="image-section">
-      { image && 
-        <img src={image} alt="upload" style={{ width: 100, height: 100}}/>}
+        {image &&
+          <img src={image} alt="upload" style={{ width: 100, height: 100 }} />}
       </div>
-      
+
       <div className="lower-items">
         <ul>
           <li>
@@ -102,17 +125,17 @@ const PostMaker = ({ setReports, reports }) => {
           </li>
 
           <li>
-            <button onClick={()=> setModal(!modal)}>
+            <button onClick={() => setModal(!modal)}>
               <i class="fas fa-map-marker-alt map-marker"></i>
             </button>
           </li>
         </ul>
-        <div className="btn" onClick={createReports}>
+        <div className="btn" onClick={createReports,getCiOfEmail}>
           <button className="btn-public">Publicar</button>
         </div>
       </div>
     </div>
-    <div className="background-opacity-modal" style={{display: modal ? "flex" : "none" }}>
+    <div className="background-opacity-modal" style={{ display: modal ? "flex" : "none" }}>
       <div className="modal">
         {/* <button onClick={()=> setCloseModal(!closeModal)}>
           <i class="fas fa-times"></i>
@@ -120,16 +143,16 @@ const PostMaker = ({ setReports, reports }) => {
         <div className="form-left">
           <div className="box-input">
             <label>Ingresar la ubicacion</label>
-            <input type="text" placeholder="Avenida brasil 1204"></input>
+            <input type="text" placeholder="Avenida Brasil 1204" value={location} onChange={(e) => setLocation(e.target.value)}></input>
           </div>
           <div className="box-btn">
-            <button>Guardar</button>
+            <button >Guardar</button>
           </div>
         </div>
       </div>
-    </div>  
-    </>
-  );
-};
+    </div>
+  </>
+);
+  };
 
 export default PostMaker;
