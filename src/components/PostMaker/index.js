@@ -101,10 +101,10 @@ return (
       <div className="description-report">
         <textarea value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Ingrese la descripcion"></textarea>
       </div>
-
-      { /*<div className="location-report">
+  
+      <div className="location-report">
         <textarea value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Ingrese la ubicacion"></textarea>
-      </div> */}
+      </div> 
 
       <div className="image-section">
         {image &&
@@ -125,7 +125,7 @@ return (
           </li>
 
           <li>
-            <button onClick={() => setModal(!modal)}>
+            <button>
               <i class="fas fa-map-marker-alt map-marker"></i>
             </button>
           </li>
@@ -135,24 +135,8 @@ return (
         </div>
       </div>
     </div>
-    <div className="background-opacity-modal" style={{ display: modal ? "flex" : "none" }}>
-      <div className="modal">
-        {/* <button onClick={()=> setCloseModal(!closeModal)}>
-          <i class="fas fa-times"></i>
-        </button> */}
-        <div className="form-left">
-          <div className="box-input">
-            <label>Ingresar la ubicacion</label>
-            <input type="text" placeholder="Avenida Brasil 1204" value={location} onChange={(e) => setLocation(e.target.value)}></input>
-          </div>
-          <div className="box-btn">
-            <button >Guardar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </>
-);
-  };
+    </>
+  );
+};
 
 export default PostMaker;
