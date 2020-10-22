@@ -55,7 +55,7 @@ const createReports = () => {
     setReports([...reports, { description, image, location }]);
     setDescription('')
 
-    const requestOptions = {
+   const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -69,8 +69,8 @@ const createReports = () => {
     fetch('http://localhost:5000/createReport', requestOptions)
       .then(res => res.json())
       .then((result) => {
-        if (result.status === 201) {
-          console.log(result.ci)
+        if(result.status === 201){
+         console.log("Exito")           
         } else {
           console.log("Hubo errores verificar")
         }
@@ -83,7 +83,7 @@ const createReports = () => {
   }
 };
 
-console.log(description,/* reports,*/ location);
+console.log(description,reports, location);
 
 return (
   <>
