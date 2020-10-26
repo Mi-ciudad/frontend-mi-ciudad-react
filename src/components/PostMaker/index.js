@@ -25,8 +25,7 @@ const onImageChange = event => {
 // Esto es para que el user no pueda mandar el reporte si tiene menos de 3 palabras, ademas publica el reporte
 const createReports = () => {
   if (description.length > 3) {
-    setReports([...reports, { description, image, location }]);
-    setDescription('')
+   
 
     const requestOptions = {
       method: 'POST',
@@ -78,6 +77,8 @@ const createReports = () => {
       )
       .catch(console.log(requestOptions))
   }
+  setReports([...reports, { description, image, location }]);
+  setDescription('')
 };
 
 console.log(description,/* reports,*/ location);
