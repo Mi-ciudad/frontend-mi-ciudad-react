@@ -28,7 +28,7 @@ const createReports = () => {
     setReports([...reports, { description, image, location }]);
     setDescription('')
 
-    let requestOptions = {
+    const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -40,8 +40,8 @@ const createReports = () => {
       .then(res => res.json())
       .then((result) => {
         if (result.status === 201) { 
-          console.log(ci)
           ci = result[0].ci
+          console.log(ci)
         } else {
           console.log("Hubo un error")
         }
@@ -57,7 +57,7 @@ const createReports = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         "descripcion": `'${description}'`,
-        "direc": `'${location}'`,
+        "direccion": `'${location}'`,
         "estado": "Esperando aprobación",
         "ci": 12345678
       })
@@ -67,7 +67,7 @@ const createReports = () => {
       .then(res => res.json())
       .then((result) => {
         if (result.status === 201) {
-          console.log(result.ci)
+          
         } else {
           console.log("Hubo errores verificar")
         }
