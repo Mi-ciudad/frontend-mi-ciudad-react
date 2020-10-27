@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 class PostListComp extends React.Component {
     render() {
         return (
