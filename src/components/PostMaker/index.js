@@ -13,32 +13,6 @@ const PostMaker = ({ setReports, reports }) => {
   const [image, setImage] = useState(null);
   var ci = 0;
 
-  const getCiOfEmail = () => {
-    const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        "email": `${context.user}`
-      })
-    };
-
-    fetch('http://localhost:5000/ci', requestOptions)
-      .then(res => res.json())
-      .then((result) => {
-        if (result.status === 201) { 
-          console.log(ci)
-        } else {
-          console.log("Hubo un error")
-        }
-      },
-        (error) => {
-          console.log(error)
-        }
-      )
-      .catch(console.log(requestOptions))
-  }
-
-  
 
 const onImageChange = event => {
   if (event.target.files && event.target.files[0]) {
@@ -57,18 +31,42 @@ const createReports = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        "descripcion": `${description}`,
-        "direc": `${location}`,
-        "estado": "Esperando aprobación",
-        "ci": `${ci}`
+        "email": `'${context.user}'`
       })
     };
 
-    fetch('http://localhost:5000/createReport', requestOptions)
+    fetch('http://localhost:5000/ci', requestOptions)
+      .then(res => res.json())
+      .then((result) => {
+        if (result.status === 201) { 
+          ci = result[0].ci
+          console.log(ci)
+        } else {
+          console.log("Hubo un error")
+        }
+      },
+        (error) => {
+          console.log(error)
+        }
+      )
+    .catch(console.log(requestOptions))
+
+   const requestOptions2 = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        "descripcion": `'${description}'`,
+        "direccion": `'${location}'`,
+        "estado": "Esperando aprobación",
+        "ci": 12345678
+      })
+    };
+
+    fetch('http://localhost:5000/createReport', requestOptions2)
       .then(res => res.json())
       .then((result) => {
         if (result.status === 201) {
-          console.log(result.ci)
+          
         } else {
           console.log("Hubo errores verificar")
         }
@@ -128,7 +126,7 @@ return (
             </button>
           </li>
         </ul>
-        <div className="btn" onClick={createReports, getCiOfEmail}>
+        <div className="btn" onClick={createReports}>
           <button className="btn-public">Publicar</button>
         </div>
       </div>
