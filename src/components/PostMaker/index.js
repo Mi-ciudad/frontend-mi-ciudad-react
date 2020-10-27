@@ -11,9 +11,7 @@ const PostMaker = ({ setReports, reports }) => {
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
   const [image, setImage] = useState(null);
-  const [modal, setModal] = useState(false);
   var ci = 0;
-
 
   const getCiOfEmail = () => {
     const requestOptions = {
@@ -130,7 +128,7 @@ return (
             </button>
           </li>
         </ul>
-        <div className="btn" onClick={createReports,getCiOfEmail}>
+        <div className="btn" onClick={createReports, getCiOfEmail}>
           <button className="btn-public">Publicar</button>
         </div>
       </div>
