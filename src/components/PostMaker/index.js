@@ -12,7 +12,16 @@ const PostMaker = ({ setReports, reports }) => {
   const [location, setLocation] = useState("");
   const [image, setImage] = useState(null);
   const [modal, setModal] = useState(false);
-  
+ 
+  var ci = 0;
+
+
+const onImageChange = event => {
+  if (event.target.files && event.target.files[0]) {
+    let img = event.target.files[0];
+    setImage(URL.createObjectURL(img))
+  }
+};
 
   const onImageChange = event => {
     if (event.target.files && event.target.files[0]) {
