@@ -46,10 +46,6 @@ class PostListComp extends React.Component {
                     </ul>
                 </div>
             </div>
-
-
-
-
         )
     }
 }
