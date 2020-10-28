@@ -7,7 +7,6 @@ import PhotoProfile from "../../assets/images/fot-profil.png";
 import { UserContext } from "../../context/User";
 
 const PostList = ({ reports }) => {
-  console.log("llega")
   const context = useContext(UserContext);
 
   return (
