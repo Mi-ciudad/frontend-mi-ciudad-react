@@ -55,6 +55,11 @@ const PostList = ({ reports }) => {
                     <i class="fas fa-comment comments"></i>
                   </button>
                 </li>
+                <li>
+                  <button>
+                  <i class="fas fa-trash"></i>
+                  </button>
+                </li>
               </ul>
             </div>
           </div>

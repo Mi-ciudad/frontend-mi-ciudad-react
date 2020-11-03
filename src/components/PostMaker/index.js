@@ -13,13 +13,13 @@ const PostMaker = ({ setReports, reports }) => {
   const [image, setImage] = useState(null);
   const [ci, setCi] =  useState(0);
 
-  const onImageChange = event => {
-    if (event.target.files && event.target.files[0]) {
-      let img = event.target.files[0];
-      setImage(URL.createObjectURL(img))
-    }
-  };
 
+const onImageChange = event => {
+  if (event.target.files && event.target.files[0]) {
+    let img = event.target.files[0];
+    setImage(URL.createObjectURL(img))
+  }
+};
   // Esto es para que el user no pueda mandar el reporte si tiene menos de 3 palabras, ademas publica el reporte
   const createReports = () => {
   

@@ -1,7 +1,6 @@
 import React from 'react'
 import './styles.scss'
 
-
 class PostListComp extends React.Component {
     render() {
         return (
@@ -47,10 +46,6 @@ class PostListComp extends React.Component {
                     </ul>
                 </div>
             </div>
-
-
-
-
         )
     }
 }
