@@ -12,7 +12,7 @@ const PostList = ({ reports }) => {
   return (
     <div className="container-reports">
       {reports.map((report, index ) => {
-        console.log(report);
+    //    console.log(report);
         return (
           <div className="upload-report">
             <div className="top-report">

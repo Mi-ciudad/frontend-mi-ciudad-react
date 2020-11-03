@@ -11,8 +11,7 @@ const PostMaker = ({ setReports, reports }) => {
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
   const [image, setImage] = useState(null);
-  const [modal, setModal] = useState(false);
-  
+  const [ci, setCi] =  useState(0);
 
   const onImageChange = event => {
     if (event.target.files && event.target.files[0]) {
@@ -23,15 +22,13 @@ const PostMaker = ({ setReports, reports }) => {
 
   // Esto es para que el user no pueda mandar el reporte si tiene menos de 3 palabras, ademas publica el reporte
   const createReports = () => {
-    var ci;
-
-    if (description.length > 3) {
-    
+  
+    if (description.length > 1){
       const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          "email": `'${context.user}'`
+          "email": `${context.user}`
         })
       };
 
@@ -39,8 +36,9 @@ const PostMaker = ({ setReports, reports }) => {
         fetch('http://localhost:5000/ci', requestOptions)
           .then(res => res.json())
           .then((result) => {
-            if (result.status === 201) {
-              ci = result.ci
+            if (result.data.ci) {
+              console.log(result.data.ci)
+              setCi(result.data.ci)
               console.log(ci)
             } else {
               console.log("Hubo un error")
@@ -50,19 +48,22 @@ const PostMaker = ({ setReports, reports }) => {
               console.log(error)
             }
           )
-          .catch(console.log(requestOptions))
+          .catch(console.log(ci))
       } catch (error) {
 
       }
+    }
+
+    if (description.length > 3) {
 
       const requestOptions2 = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          "descripcion": `'${description}'`,
-          "direccion": `'${location}'`,
+          "descripcion": `${description}`,
+          "direccion": `${location}`,
           "estado": "Esperando aprobación",
-          "ci": 987654
+          "ci": ci
         })
       };
 
@@ -71,11 +72,11 @@ const PostMaker = ({ setReports, reports }) => {
           .then(res => res.json())
           .then((result) => {
             if (result.status === 201) {
-              console.log("try if")
               console.log(result)
               //Tomar datos de la request para altar el reporte, los esta tomando mal
             } else {
               console.log("Hubo errores verificar")
+              console.log(result.status)
             }
           },
 
@@ -83,7 +84,7 @@ const PostMaker = ({ setReports, reports }) => {
               console.log(error)
             }
           )
-          .catch(console.log(requestOptions))
+          .catch(console.log(requestOptions2))
 
       } catch (error) {
         console.log("Catch error" + error)
@@ -94,7 +95,7 @@ const PostMaker = ({ setReports, reports }) => {
     setDescription('')
   };
 
-  console.log(description,/* reports,*/ location);
+//  console.log(description,/* reports,*/ location);
 
   return (
     <>
