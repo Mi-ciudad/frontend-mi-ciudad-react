@@ -13,46 +13,33 @@ const Main = () => {
       method: "GET",
     };
 
-    try {
       fetch("http://localhost:5000/reports", requestOptions)
-        .then((res) => res.json())
-        .then(
-          (result) => {
-            if (result.status === 200) {
-              setReports(result.reportes);
-            } else {
-              console.log("Algo salio mal, verificar");
-              console.log(result.status);
-            }
-          },
-          (error) => {
-            console.log(error);
+        .then(result => result.json())
+        .then(data => {
+          const reports = data.data;
+          try {
+            setReports(reports);
+          } catch (error) {
+            console.log(error)
           }
-        )
+        })
         .catch(console.log());
-    } catch (error) {
-      console.log(error);
-    }
+    
   };
 
 
     useEffect(() => {
       // code to run on component mount
       getReports();
+  
     }, [])
 
   return (
     <div className="content-generics">
       <PostMaker reports={reports} setReports={setReports} /> 
-      <PostList reports={reports} />
-      <div className ="upload-report">
-        {reports.map((report) => (
-          <PostListComp
-            user={report.ci}
-            description={report.descripcion}
-            location={report.direccion}
-          ></PostListComp>
-        ))}
+      
+      <div className = "upload-report">
+        <PostList reports={reports}></PostList>
       </div>
     </div>
   );

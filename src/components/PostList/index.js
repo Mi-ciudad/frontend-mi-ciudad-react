@@ -12,7 +12,6 @@ const PostList = ({ reports }) => {
   return (
     <div className="container-reports">
       {reports.map((report, index ) => {
-    //    console.log(report);
         return (
           <div className="upload-report">
             <div className="top-report">
@@ -26,8 +25,7 @@ const PostList = ({ reports }) => {
             </div>
 
             <div className="description-report">
-              <p>{report.description}</p>
-             
+              <p>{report.descripcion}</p>
             </div>
 
             <div className="image-section">
@@ -39,7 +37,7 @@ const PostList = ({ reports }) => {
 
             <div className="location-report" key={index}>
             {/* <i class="fas fa-map-marker-alt map-marker"></i> */}
-              <p>{report.location}</p>
+              <p>{report.direccion}</p>
             </div>
 
             <div className="lower-items">
