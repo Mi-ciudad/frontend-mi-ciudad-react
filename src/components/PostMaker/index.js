@@ -31,27 +31,20 @@ const onImageChange = event => {
           "email": `${context.user}`
         })
       };
-
-      try {
-        fetch('http://localhost:5000/ci', requestOptions)
+    
+        fetch('http://10.1.14.80:5000/ci', requestOptions)
           .then(res => res.json())
-          .then((result) => {
-            if (result.data.ci) {
-              console.log(result.data.ci)
-              setCi(result.data.ci)
+          .then(result => {
+            const results = result.data
+            if (results.ci) {
+              console.log(results.ci)
+              setCi(results.ci)
               console.log(ci)
             } else {
               console.log("Hubo un error")
             }
-          },
-            (error) => {
-              console.log(error)
-            }
-          )
+          })
           .catch(console.log(ci))
-      } catch (error) {
-
-      }
     }
 
     if (description.length > 3) {
@@ -66,9 +59,7 @@ const onImageChange = event => {
           "ci": ci
         })
       };
-
-      try {
-        fetch('http://localhost:5000/createReport', requestOptions2)
+        fetch('http://10.1.14.80:5000/createReport', requestOptions2)
           .then(res => res.json())
           .then((result) => {
             if (result.status === 201) {
@@ -85,11 +76,6 @@ const onImageChange = event => {
             }
           )
           .catch(console.log(requestOptions2))
-
-      } catch (error) {
-        console.log("Catch error" + error)
-      }
-
     }
     setReports([...reports, { description, image, location }]);
     setDescription('')

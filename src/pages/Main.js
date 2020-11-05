@@ -7,7 +7,7 @@ import "../assets/css/generic.scss";
 const Main = () => {
 
   const [reports, setReports] = useState([]);
- 
+ z
   const getReports = () => {
     const requestOptions = {
       method: "GET",
