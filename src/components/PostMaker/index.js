@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import './styles.scss';
 import '../../assets/css/mobile.css';
-
+import jwt_decode from "jwt-decode";
 
 import PhotoProfile from '../../assets/images/default-profile.png';
 import { UserContext } from "../../context/User";
@@ -11,7 +11,6 @@ const PostMaker = ({ setReports, reports }) => {
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
   const [image, setImage] = useState(null);
-  const [ci, setCi] =  useState(0);
 
 
 const onImageChange = event => {
@@ -23,39 +22,8 @@ const onImageChange = event => {
   // Esto es para que el user no pueda mandar el reporte si tiene menos de 3 palabras, ademas publica el reporte
   const createReports = () => {
   
-    if (description.length > 1){
-      const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          "email": `${context.user}`
-        })
-      };
-
-      try {
-        fetch('http://localhost:5000/ci', requestOptions)
-          .then(res => res.json())
-          .then((result) => {
-            if (result.data.ci) {
-              console.log(result.data.ci)
-              setCi(result.data.ci)
-              console.log(ci)
-            } else {
-              console.log("Hubo un error")
-            }
-          },
-            (error) => {
-              console.log(error)
-            }
-          )
-          .catch(console.log(ci))
-      } catch (error) {
-
-      }
-    }
-
     if (description.length > 3) {
-
+      
       const requestOptions2 = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -63,7 +31,7 @@ const onImageChange = event => {
           "descripcion": `${description}`,
           "direccion": `${location}`,
           "estado": "Esperando aprobación",
-          "ci": ci
+          "ci": jwt_decode(localStorage.getItem("token")).ci
         })
       };
 
@@ -81,18 +49,20 @@ const onImageChange = event => {
           },
 
             (error) => {
-              console.log(error)
+              console.log(error);
             }
           )
           .catch(console.log(requestOptions2))
 
       } catch (error) {
-        console.log("Catch error" + error)
+        console.log("Catch error" + error);
       }
 
     }
     setReports([...reports, { description, image, location }]);
-    setDescription('')
+    setDescription('');
+    setLocation('');
+    window.location.reload()
   };
 
 //  console.log(description,/* reports,*/ location);
@@ -105,7 +75,7 @@ const onImageChange = event => {
             <figure>
               <img src={PhotoProfile} alt='Algo Lindo' />
             </figure>
-            <p className="userName">{context.user}</p>
+            <p className="userName">{jwt_decode(localStorage.getItem("token")).email}</p>
           </div>
           {/* <div className="id">#122333</div> */}
         </div>
