@@ -3,6 +3,8 @@ import './styles.scss';
 import { UserContext } from "../../context/User";
 import { useHistory } from "react-router-dom";
 import '../../assets/css/reset.css';
+import jwt_decode from "jwt-decode";
+
 import '../../assets/css/mobile.css';
 
 import DefaultPicture from '../../assets/images/mock-phone-rea.png';
@@ -15,7 +17,6 @@ const LoginComponent = () => {
     const [password, setPassword] = useState("");
 
     const loginFunction = () => {
-
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -25,10 +26,12 @@ const LoginComponent = () => {
             })
         };
 
-        fetch('http://10.1.14.80:5000/login', requestOptions)
+        fetch('http://localhost:5000/login', requestOptions)
             .then(res => res.json())
             .then((result) => {
-                if (result.status === 200) {zz
+                if (result.token) {
+                    localStorage.setItem("logeado", 'true');
+                    localStorage.setItem("token", result.token);
                     handleLogin();
                 } else {
                     handleRegister()
@@ -36,6 +39,7 @@ const LoginComponent = () => {
             },
                 (error) => {
                     console.log(error)
+                   
                 }
             )
             .catch(console.log(requestOptions))
@@ -43,13 +47,11 @@ const LoginComponent = () => {
     }
 
     const handleLogin = () => {
-        context.setUser(user);
         history.push("/main")
     }
 
     const handleRegister = () => {
-        context.setUser(user);
-        history.push("/register")
+       history.push("/register")
     }
 
     return (

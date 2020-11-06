@@ -44,18 +44,18 @@ const PostList = ({ reports }) => {
               <ul>
                 <li>
                   <button>
-                    <i class="fas fa-thumbs-up like"></i>
+                    <i className="fas fa-thumbs-up like"></i>
                   </button>
                 </li>
 
                 <li>
                   <button>
-                    <i class="fas fa-comment comments"></i>
+                    <i className="fas fa-comment comments"></i>
                   </button>
                 </li>
                 <li>
                   <button>
-                  <i class="fas fa-trash"></i>
+                  <i className="fas fa-trash"></i>
                   </button>
                 </li>
               </ul>

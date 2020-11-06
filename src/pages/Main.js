@@ -1,16 +1,28 @@
 import React, { useState, useEffect } from "react";
 import PostMaker from "../components/PostMaker";
+import { useHistory } from "react-router-dom";
 import PostList from "../components/PostList";
-import PostListComp from "../components/PostLIstComponent";
 import "../assets/css/generic.scss";
 
 const Main = () => {
 
   const [reports, setReports] = useState([]);
- z
+  const history = useHistory();
+
+  const handleLogin = () => {
+    history.push("/")
+}
+
   const getReports = () => {
+
+    if (localStorage.getItem("logeado")){
+      console.log('El usuario se logueo correctamente')
+    }else{
+      handleLogin()
+    }
+
     const requestOptions = {
-      method: "GET",
+      method: "GET"
     };
 
       fetch("http://localhost:5000/reports", requestOptions)
@@ -27,11 +39,9 @@ const Main = () => {
     
   };
 
-
     useEffect(() => {
       // code to run on component mount
       getReports();
-  
     }, [])
 
   return (
