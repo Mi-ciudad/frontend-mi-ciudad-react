@@ -5,11 +5,9 @@ import jwt_decode from "jwt-decode";
 
 
 import PhotoProfile from "../../assets/images/fot-profil.png";
-import { UserContext } from "../../context/User";
+
 
 const PostList = ({ reports }) => {
-  const context = useContext(UserContext);
-
   return (
     <div className="container-reports">
       {reports.map((report, index ) => {
@@ -20,7 +18,7 @@ const PostList = ({ reports }) => {
                 <figure>
                   <img src={PhotoProfile} alt="Algo Lindo" />
                 </figure>
-                <p className="userName">{"nombre de usuario paaaaaaaaaaaaaaaaaaaaaaaa"}</p>
+                <p className="userName">{report.username}</p>
               </div>
               <div className="id">#122333</div>
             </div>

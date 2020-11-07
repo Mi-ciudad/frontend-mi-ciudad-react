@@ -18,6 +18,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import CaseTrackingComponent from "./components/CaseTracking";
 import MenuMobile from "./components/SideBar/MenuMobile";
 import HistoryData from "./components/HistoryData";
+import Historial from "./pages/Historial";
 
 class App extends Component {
   render() {
@@ -29,7 +30,7 @@ class App extends Component {
             <PrivateRoute path="/main" component={Main} />
             <Route path="/profile" component={PerfilContainer}></Route>
             <Route path="/reports"></Route>
-            <Route path="/history" component={HistoryData}></Route>
+            <Route path="/history" component={Historial}></Route>
             <Route path="/tracking-case" component={CaseTrackingComponent}></Route>
             <Route path="/help" component={HelpData}></Route>
             <Route path="/about-us" component={AboutComponent}></Route>

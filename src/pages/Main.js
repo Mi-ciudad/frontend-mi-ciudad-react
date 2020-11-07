@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PostMaker from "../components/PostMaker";
 import PostList from "../components/PostList";
-import PostListComp from "../components/PostLIstComponent";
 import "../assets/css/generic.scss";
 
 const Main = () => {

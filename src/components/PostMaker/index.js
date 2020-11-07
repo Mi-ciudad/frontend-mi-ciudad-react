@@ -21,7 +21,8 @@ const onImageChange = event => {
 };
   // Esto es para que el user no pueda mandar el reporte si tiene menos de 3 palabras, ademas publica el reporte
   const createReports = () => {
-  
+    const nombre = jwt_decode(localStorage.getItem("token")).nombre + " " + jwt_decode(localStorage.getItem("token")).apellido
+
     if (description.length > 3) {
       
       const requestOptions2 = {
@@ -31,7 +32,8 @@ const onImageChange = event => {
           "descripcion": `${description}`,
           "direccion": `${location}`,
           "estado": "Esperando aprobación",
-          "ci": jwt_decode(localStorage.getItem("token")).ci
+          "ci": jwt_decode(localStorage.getItem("token")).ci,
+          "username" : `'${nombre}'`
         })
       };
 

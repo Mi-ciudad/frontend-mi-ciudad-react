@@ -66,9 +66,9 @@ const LoginComponent = () => {
 
                 <div className="login-f">
                     <div className="input-name box">
-                        <label>Username</label>
+                        <label>Email</label>
                         {/* e = evento / target = elemento en el que sucedio el evento /  */}
-                        <input type="text" placeholder="UserName" value={user} onChange={(e) => setUser(e.target.value)}></input>
+                        <input type="text" placeholder="miciudad@example.com" value={user} onChange={(e) => setUser(e.target.value)}></input>
                     </div>
                     <div className="input-password box">
                         <label>Password</label>
