@@ -9,7 +9,6 @@ import DefaultPicture from '../../assets/images/mock-phone-rea.png';
 import Mancha from '../../assets/images/manchar.svg';
 
 const LoginComponent = () => {
-    const context = useContext(UserContext);
     const history = useHistory();
     const [user, setUser] = useState("");
     const [password, setPassword] = useState("");
@@ -31,7 +30,7 @@ const LoginComponent = () => {
                 if (result.status === 200) {
                     handleLogin();
                 } else {
-                    handleRegister()
+                    handleRegister();
                 }
             },
                 (error) => {
@@ -43,12 +42,10 @@ const LoginComponent = () => {
     }
 
     const handleLogin = () => {
-        context.setUser(user);
         history.push("/main")
     }
 
     const handleRegister = () => {
-        context.setUser(user);
         history.push("/register")
     }
 
