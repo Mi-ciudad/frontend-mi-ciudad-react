@@ -4,6 +4,7 @@ import { UserContext } from "../../context/User";
 import { useHistory } from "react-router-dom";
 import '../../assets/css/reset.css';
 import '../../assets/css/mobile.css';
+import jwt_decode from "jwt-decode";
 
 import DefaultPicture from '../../assets/images/mock-phone-rea.png';
 import Mancha from '../../assets/images/manchar.svg';
@@ -29,6 +30,7 @@ const LoginComponent = () => {
             .then((result) => {
                 if (result.status === 200) {
                     handleLogin();
+                    localStorage.setItem("token", result.token)
                 } else {
                     handleRegister();
                 }

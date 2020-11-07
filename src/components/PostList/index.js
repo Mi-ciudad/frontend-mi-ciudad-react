@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import "./styles.scss";
 import '../../assets/css/mobile.css';
+import jwt_decode from "jwt-decode";
 
 
 import PhotoProfile from "../../assets/images/fot-profil.png";
@@ -19,7 +20,7 @@ const PostList = ({ reports }) => {
                 <figure>
                   <img src={PhotoProfile} alt="Algo Lindo" />
                 </figure>
-                <p className="userName">{context.user}</p>
+                <p className="userName">{"nombre de usuario paaaaaaaaaaaaaaaaaaaaaaaa"}</p>
               </div>
               <div className="id">#122333</div>
             </div>

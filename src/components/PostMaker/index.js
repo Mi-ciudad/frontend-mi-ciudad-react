@@ -65,8 +65,6 @@ const onImageChange = event => {
     window.location.reload()
   };
 
-//  console.log(description,/* reports,*/ location);
-
   return (
     <>
       <div className="report">
