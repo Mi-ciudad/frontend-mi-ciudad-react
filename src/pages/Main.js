@@ -16,7 +16,7 @@ const Main = () => {
       fetch("http://localhost:5000/reports", requestOptions)
         .then(result => result.json())
         .then(data => {
-          const reports = data.data;
+          const reports = data.reportes;
           try {
             setReports(reports);
           } catch (error) {
