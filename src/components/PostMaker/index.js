@@ -38,7 +38,7 @@ const onImageChange = event => {
       };
 
       try {
-        fetch('http://localhost:5000/createReport', requestOptions2)
+        fetch('http://10.1.14.80:5000/createReport', requestOptions2)
           .then(res => res.json())
           .then((result) => {
             if (result.status === 201) {

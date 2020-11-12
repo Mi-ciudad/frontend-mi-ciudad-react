@@ -33,7 +33,7 @@ const Register = () =>  {
             })
         };
 
-        fetch('http://localhost:5000/register', requestOptions)
+        fetch('http://10.1.14.80:5000/register', requestOptions)
             .then(res => res.json())
             .then((result) => {
                 if (result.status === 200) {

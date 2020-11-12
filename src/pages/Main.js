@@ -12,7 +12,7 @@ const Main = () => {
       method: "GET",
     };
 
-      fetch("http://localhost:5000/reports", requestOptions)
+      fetch("http://10.1.14.80:5000/reports", requestOptions)
         .then(result => result.json())
         .then(data => {
           const reports = data.reportes;

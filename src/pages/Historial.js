@@ -19,7 +19,7 @@ const historyFunction = () =>{
   };
 
 
-  fetch('http://localhost:5000/history', requestOptions2)
+  fetch('http://10.1.14.80:5000/history', requestOptions2)
     .then(res => res.json())
     .then((result) => {
       const reportes = result.reportes;
