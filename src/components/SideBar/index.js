@@ -33,7 +33,7 @@ class SideBar extends React.Component {
                         </li>
                         <li>
                             <a href="/tracking-case">
-                                <i class="far fa-building"></i> Seguimiento de casos
+                                <i class="fas fa-lock"></i> Cambiar contraseña
                             </a>
                         </li>
 

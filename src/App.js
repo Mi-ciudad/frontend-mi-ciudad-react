@@ -15,7 +15,7 @@ import RecoverPasswordComponent from "./components/RecoverPasswordComponent";
 import AboutComponent from "./components/About";
 import UserContextProvider from "./context/User";
 import PrivateRoute from "./components/PrivateRoute";
-import CaseTrackingComponent from "./components/CaseTracking";
+import ChangePassword from "./components/ChangePassword";
 import MenuMobile from "./components/SideBar/MenuMobile";
 import HistoryData from "./components/HistoryData";
 import Historial from "./pages/Historial";
@@ -31,7 +31,7 @@ class App extends Component {
             <Route path="/profile" component={PerfilContainer}></Route>
             <Route path="/reports"></Route>
             <Route path="/history" component={Historial}></Route>
-            <Route path="/tracking-case" component={CaseTrackingComponent}></Route>
+            <Route path="/change-password" component={ChangePassword}></Route>
             <Route path="/help" component={HelpData}></Route>
             <Route path="/about-us" component={AboutComponent}></Route>
           </Switch>
