@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import './styles.scss';
 import jwt_decode from "jwt-decode";
 

@@ -1,13 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import './styles.scss';
 import '../../assets/css/mobile.css';
 import jwt_decode from "jwt-decode";
 
 import PhotoProfile from '../../assets/images/default-profile.png';
-import { UserContext } from "../../context/User";
 
 const PostMaker = ({ setReports, reports }) => {
-  const context = useContext(UserContext)
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
   const [image, setImage] = useState(null);

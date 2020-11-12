@@ -17,7 +17,6 @@ import UserContextProvider from "./context/User";
 import PrivateRoute from "./components/PrivateRoute";
 import ChangePassword from "./components/ChangePassword";
 import MenuMobile from "./components/SideBar/MenuMobile";
-import HistoryData from "./components/HistoryData";
 import Historial from "./pages/Historial";
 
 class App extends Component {

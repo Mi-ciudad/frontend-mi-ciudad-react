@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./styles.scss";
 import '../../assets/css/mobile.css';
-import jwt_decode from "jwt-decode";
 
 
 import PhotoProfile from '../../assets/images/default-profile.png';

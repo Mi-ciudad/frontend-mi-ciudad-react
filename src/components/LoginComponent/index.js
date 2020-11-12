@@ -1,10 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import './styles.scss';
-import { UserContext } from "../../context/User";
 import { useHistory } from "react-router-dom";
 import '../../assets/css/reset.css';
 import '../../assets/css/mobile.css';
-import jwt_decode from "jwt-decode";
 
 import DefaultPicture from '../../assets/images/mock-phone-rea.png';
 import Mancha from '../../assets/images/manchar.svg';
