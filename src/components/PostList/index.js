@@ -4,7 +4,7 @@ import '../../assets/css/mobile.css';
 import jwt_decode from "jwt-decode";
 
 
-import PhotoProfile from "../../assets/images/fot-profil.png";
+import PhotoProfile from '../../assets/images/default-profile.png';
 
 
 const PostList = ({ reports }) => {
@@ -12,7 +12,7 @@ const PostList = ({ reports }) => {
     <div className="container-reports">
       {reports.map((report, index ) => {
         return (
-          <div className="upload-report">
+          <div className="upload-report-rep">
             <div className="top-report">
               <div className="profile">
                 <figure>
