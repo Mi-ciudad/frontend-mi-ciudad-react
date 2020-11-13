@@ -11,7 +11,6 @@ import HelpData from "./components/HelpData";
 import PerfilContainer from "./pages/Perfil";
 import LoginComponent from "./components/LoginComponent";
 import Register from "./components/Register";
-import RecoverPasswordComponent from "./components/RecoverPasswordComponent";
 import AboutComponent from "./components/About";
 import UserContextProvider from "./context/User";
 import PrivateRoute from "./components/PrivateRoute";
@@ -47,7 +46,6 @@ const MainRouter = () => {
         <Switch>
           <Route exact path="/" component={LoginComponent}></Route>
           <Route exact path="/register" component={Register}></Route>
-          <Route exact path="/recover-password" component={RecoverPasswordComponent}></Route>
           <Route path="/" component={App} />
         </Switch>
       </Router>
