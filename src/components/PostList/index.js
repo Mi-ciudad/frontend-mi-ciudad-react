@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React } from "react";
 import "./styles.scss";
 import '../../assets/css/mobile.css';
 
@@ -7,7 +7,6 @@ import PhotoProfile from '../../assets/images/default-profile.png';
 
 
 const PostList = ({ reports }) => {
-  const [count, setCount] = useState(0);
 
   return (
     <div className="container-reports">
@@ -43,7 +42,7 @@ const PostList = ({ reports }) => {
             <div className="lower-items">
               <ul>
                 <li>
-                  <button onClick={() => setCount(count + 1)}>
+                  <button>
                     <i class="fas fa-thumbs-up like"></i>
                   </button>
                 </li>
