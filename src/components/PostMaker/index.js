@@ -5,12 +5,15 @@ import jwt_decode from "jwt-decode";
 
 import PhotoProfile from '../../assets/images/default-profile.png';
 
+  const nombre = jwt_decode(localStorage.getItem("token")).nombre + " " + jwt_decode(localStorage.getItem("token")).apellido
 const PostMaker = ({ setReports, reports }) => {
+ 
+  
+
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
   const [image, setImage] = useState(null);
-
-
+ 
 const onImageChange = event => {
   if (event.target.files && event.target.files[0]) {
     let img = event.target.files[0];
@@ -19,7 +22,8 @@ const onImageChange = event => {
 };
   // Esto es para que el user no pueda mandar el reporte si tiene menos de 3 palabras, ademas publica el reporte
   const createReports = () => {
-    const nombre = jwt_decode(localStorage.getItem("token")).nombre + " " + jwt_decode(localStorage.getItem("token")).apellido
+  
+    const ci = (jwt_decode(localStorage.getItem("token")).ci);
 
     if (description.length > 3) {
       
@@ -30,7 +34,7 @@ const onImageChange = event => {
           "descripcion": `${description}`,
           "direccion": `${location}`,
           "estado": "Esperando aprobación",
-          "ci": jwt_decode(localStorage.getItem("token")).ci,
+          "ci": ci ,
           "username" : `'${nombre}'`
         })
       };
@@ -73,7 +77,7 @@ const onImageChange = event => {
             <figure>
               <img src={PhotoProfile} alt='Algo Lindo' />
             </figure>
-            <p className="userName">{jwt_decode(localStorage.getItem("token")).email}</p>
+            <p className="userName">{nombre}</p>
           </div>
           {/* <div className="id">#122333</div> */}
         </div>

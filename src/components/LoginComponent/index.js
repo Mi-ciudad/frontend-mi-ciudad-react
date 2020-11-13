@@ -3,6 +3,7 @@ import './styles.scss';
 import { useHistory } from "react-router-dom";
 import '../../assets/css/reset.css';
 import '../../assets/css/mobile.css';
+import jwt_decode from 'jwt-decode';
 
 import DefaultPicture from '../../assets/images/mock-phone-rea.png';
 import Mancha from '../../assets/images/manchar.svg';
@@ -29,6 +30,7 @@ const LoginComponent = () => {
                 if (result.status === 200) {
                     handleLogin();
                     localStorage.setItem("token", result.token)
+		    console.log(jwt_decode(localStorage.getItem("token")).email);
                 } else {
                     handleRegister();
                 }
@@ -43,6 +45,7 @@ const LoginComponent = () => {
 
     const handleLogin = () => {
         history.push("/main")
+	window.location.reload()
     }
 
     const handleRegister = () => {
