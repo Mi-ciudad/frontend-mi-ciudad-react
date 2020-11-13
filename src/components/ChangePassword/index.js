@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.scss';
 import '../../assets/css/reset.css';
 import '../../assets/css/mobile.css';
 import jwt_decode from 'jwt-decode';
-import useState from 'react';
+
 
 
 const ChangePassword = () =>  {
-    const [password1, setPassword1] = useState("");
+    const [passwordF, setPasswordF] = useState("");
     const [password, setPassword] = useState("");
 
     const ChangePasswordFunction = () => {
@@ -29,14 +29,15 @@ const ChangePassword = () =>  {
                    console.log("error")
                 }
             },
-                (error) => {
+              (error) => {
                     console.log(error)
                 }
             )
             .catch(console.log(requestOptions))
     }
    
-        return (    
+     return ( 
+	  
             <section className="change-password">
                 <div className="form-password">
                     <ul>
@@ -45,7 +46,7 @@ const ChangePassword = () =>  {
                         </li>
                         <li>
                             <label>Ingrese nueva contraseña</label>
-                            <input placeholder="************" value={password1} onChange={(e) => setPassword1(e.target.value)}></input>
+                            <input placeholder="************" value={passwordF} onChange={(e) => setPasswordF(e.target.value)}></input>
                         </li>
                         <li>
                             <label>Repetir contraseña</label>
@@ -59,7 +60,7 @@ const ChangePassword = () =>  {
             
                 
             </section>
-
+	
         )
 }
 
