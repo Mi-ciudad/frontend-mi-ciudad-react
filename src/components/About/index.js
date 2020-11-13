@@ -75,7 +75,7 @@ const AboutComponent = () =>  {
                     <div className="left">
                         <label className="name-team">Lucia Anza</label>
                         <div className="line-title"></div>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words</p>
+                        <p>Soy Lucía Anza, fui encargada de la aplicación de escritorio del administrador junto a Belén, uno hobbies es la fotografía y me encanta el  diseño.</p>
                     </div>
                     
                     <figure className="right img-right">
