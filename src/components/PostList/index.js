@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import "./styles.scss";
 import '../../assets/css/mobile.css';
 
@@ -7,6 +7,8 @@ import PhotoProfile from '../../assets/images/default-profile.png';
 
 
 const PostList = ({ reports }) => {
+  const [count, setCount] = useState(0);
+
   return (
     <div className="container-reports">
       {reports.map((report, index ) => {
@@ -34,14 +36,14 @@ const PostList = ({ reports }) => {
 
 
             <div className="location-report" key={index}>
-            {/* <i class="fas fa-map-marker-alt map-marker"></i> */}
+            <i class="fas fa-map-marker-alt map-marker"></i>
               <p>{report.direccion}</p>
             </div>
 
             <div className="lower-items">
               <ul>
                 <li>
-                  <button>
+                  <button onClick={() => setCount(count + 1)}>
                     <i class="fas fa-thumbs-up like"></i>
                   </button>
                 </li>
@@ -49,11 +51,6 @@ const PostList = ({ reports }) => {
                 <li>
                   <button>
                     <i class="fas fa-comment comments"></i>
-                  </button>
-                </li>
-                <li>
-                  <button>
-                  <i class="fas fa-trash"></i>
                   </button>
                 </li>
               </ul>
